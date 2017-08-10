@@ -613,17 +613,20 @@ th:first-child {
   font-size: 2rem; }
 
 .entry-title {
-  font-size: 36px;
-  font-size: 3.6rem; }
+  font-family: "Martel", "Times New Roman", sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  color: #457d94;
+  font-weight: 400; }
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: #333;
+  color: #457d94;
   text-decoration: none; }
 
 .entry-title a:focus,
 .entry-title a:hover {
-  color: #c3251d; }
+  color: #25424e; }
 
 .widget-title {
   font-size: 18px;
@@ -703,7 +706,7 @@ img.alignright,
   outline: #ccc solid 1px; }
 
 .page-title-area, .site-inner {
-  font-size: 1.6em; }
+  font-size: 2em; }
 
 address {
   display: inline;
@@ -807,14 +810,14 @@ address {
   .site-inner .gform_wrapper .gform_heading .gform_description {
     font-family: "Martel", "Times New Roman", sans-serif;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #457d94;
     font-weight: 600; }
   .site-inner .gform_wrapper .gform_body li.gfield {
     background: #eaf3fc; }
     .site-inner .gform_wrapper .gform_body li.gfield label {
       padding: 0 1em;
-      font-size: 0.8em;
+      font-size: 0.7em;
       font-weight: 400; }
     .site-inner .gform_wrapper .gform_body li.gfield .ginput_container input, .site-inner .gform_wrapper .gform_body li.gfield .ginput_container textarea {
       border: 0; }
@@ -1485,6 +1488,12 @@ p.entry-meta {
 
 .site-footer p {
   margin-bottom: 0; }
+
+.bannercontent {
+  font-family: "Martel", "Times New Roman", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #666; }
 
 @media only screen and (min-width: 768px) {
   /* Accessible Menu

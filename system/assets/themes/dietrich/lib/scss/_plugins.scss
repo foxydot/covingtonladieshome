@@ -59,7 +59,7 @@
     max-width: 101%;
     .gform_heading {
       .gform_description {
-        @include serif(1.5);
+        @include serif(1.2);
         color: $blue;
         font-weight: 600;
       }
@@ -69,7 +69,7 @@
         background: $input_bkg;
         label {
           padding: 0 1em;
-          font-size: 0.8em;
+          font-size: 0.7em;
           font-weight: 400;
         }
         .ginput_container {

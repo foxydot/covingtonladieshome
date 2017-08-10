@@ -94,19 +94,20 @@
 }
 
 .entry-title {
-  font-size: 36px;
-  font-size: 3.6rem;
+  @include serif(2);
+  color: $blue;
+  font-weight: 400;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: #333;
+  color: $blue;
   text-decoration: none;
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-  color: #c3251d;
+  color: $dkblue;
 }
 
 .widget-title {
@@ -205,7 +206,7 @@ img.alignright,
 }
 
 .page-title-area, .site-inner{
-  font-size: 1.6em;
+  font-size: 2em;
 }
 
 address{
