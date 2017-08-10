@@ -1,0 +1,417 @@
+@media only screen and (min-width: 1024px) {
+
+  /* # Defaults
+  ---------------------------------------------------------------------------------------------------- */
+  body{
+    background: linear-gradient(to right, $white 0%, $white 50%, $ltgreen 50.1%, $ltgreen 100%);
+  }
+
+  /* # Structure
+  ---------------------------------------------------------------------------------------------------- */
+
+  .site-inner{
+    background: linear-gradient(to right, $white 0%, $white 33%, rgb(240, 247, 240) 33.01%, $ltgreen 100%);
+    .content-sidebar-wrap{
+      display: flex;
+    }
+  }
+
+  /* ## Column Widths and Positions
+--------------------------------------------- */
+
+  /* ### Wrapping div for .content and .sidebar-primary */
+  .content-sidebar-sidebar .content-sidebar-wrap,
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-sidebar-content .content-sidebar-wrap {
+  }
+
+  .content-sidebar-sidebar .content-sidebar-wrap {
+    float: left;
+  }
+
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-sidebar-content .content-sidebar-wrap {
+    float: right;
+  }
+
+  /* ### Content */
+
+  .content {
+    float: right;
+    order: 2;
+  }
+
+  .content-sidebar .content,
+  .content-sidebar-sidebar .content,
+  .sidebar-content-sidebar .content {
+    float: left;
+    order: 1;
+  }
+
+  .content-sidebar-sidebar .content,
+  .sidebar-content-sidebar .content,
+  .sidebar-sidebar-content .content {
+  }
+
+  .full-width-content .content {
+    width: 100%;
+  }
+
+  /* ### Primary Sidebar */
+
+  .sidebar-primary {
+    float: right;
+  }
+
+  .sidebar-content .sidebar-primary,
+  .sidebar-sidebar-content .sidebar-primary {
+    float: left;
+    order: 1;
+  }
+
+  /* ### Secondary Sidebar */
+
+  .sidebar-secondary {
+    float: left;
+  }
+
+  .content-sidebar-sidebar .sidebar-secondary {
+    float: right;
+  }
+
+  /* # Common
+  ---------------------------------------------------------------------------------------------------- */
+
+  /* # Widgets
+  ---------------------------------------------------------------------------------------------------- */
+
+  /* # Plugins
+  ---------------------------------------------------------------------------------------------------- */
+
+  /* # Site Header
+  ---------------------------------------------------------------------------------------------------- */
+
+  .site-header {
+    background-color: $white;
+  }
+
+  .site-header > .wrap {
+    padding: 20px 0;
+    &:after {
+      @include clearfix;
+    }
+  }
+
+  /* ## Title Area
+  --------------------------------------------- */
+
+  .title-area {
+    float: left;
+    padding: 10px 0;
+    width: 300px;
+  }
+
+  .header-image .title-area {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 33%;
+    padding: 0;
+  }
+
+  .header-full-width .title-area {
+    float: left;
+  }
+
+  .site-title {
+    font-size: 30px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .site-title a,
+  .site-title a:focus,
+  .site-title a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* Logo, hide text */
+
+  .header-image .site-description,
+  .header-image .site-title a {
+    display: block;
+    text-indent: -9999px;
+  }
+
+  .header-image .site-title > a {
+    float: left;
+    min-height: 100px;
+  }
+
+  .site-description {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .site-description,
+  .site-title {
+    margin-bottom: 0;
+  }
+
+  .header-image .site-description,
+  .header-image .site-title {
+    display: block;
+    text-indent: -9999px;
+  }
+
+  /* Widget Area
+  --------------------------------------------- */
+
+  .site-header .widget-area, .pre-header .widget-area {
+    float: right;
+    text-align: right;
+    clear: right;
+    line-height: 1;
+    .widget {
+      display: inline-block;
+    }
+    .widget_nav_menu {
+      position: relative;
+      top: -0.8rem;
+      nav {
+        ul {
+          li {
+            padding: 0.4rem;
+            border: 1px solid $offwhite;
+            margin-left: -0.4rem;
+            a {
+              padding: 0;
+              text-transform: uppercase;
+              font-size: 1rem;
+              color: $ltgrey;
+            }
+            a:after {
+              @include fontawesome;
+              padding: 0 0.2rem 0 0.4rem;
+            }
+          }
+          li.register {
+            border-radius: 6px 0 0 6px;
+            a:after {
+              content: "\f007";
+            }
+          }
+          li.login {
+            border-radius: 0 6px 6px 0;
+            border-left: 0;
+            a:after {
+              content: "\f023";
+            }
+          }
+          li:hover {
+            a {
+              color: $medgrey;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .search-form {
+      display: inline-block;
+      padding: 0;
+      margin-left: 1rem;
+      position: relative;
+      whitespace: nowrap;
+      input[type="search"] {
+        font-size: 1.4rem;
+        width: 25rem;
+        background: $white;
+        padding: 0.5em 2.4em 0.5em 1em;
+        border: 0;
+        border-right: 1px solid $offwhite;
+        border-radius: 3rem;
+        line-height: 1;
+      }
+      input[type="submit"] {
+        @include fontawesome;
+        background: transparent;
+        border: 0 none;
+        clip: auto;
+        color: $ltgrey;
+        display: inline-block;
+        font-size: 1.2rem;
+        height: 18px;
+        line-height: 1;
+        text-align: center;
+        width: 18px;
+        right: 1rem;
+        top: 0.9rem;
+      }
+      &:hover {
+        input[type="search"] {
+        }
+      }
+    }
+  }
+
+  .site-header .widget-area {
+    float: right;
+    text-align: right;
+  }
+
+  .page-title-area {
+    background: $white;
+    .banner {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      .texturize {
+        .gradient {
+          min-height: 400px;
+        }
+      }
+    }
+  }
+
+  .page-title-area{
+    .banner{
+      .wrap{
+        .gradient {
+          min-height: 450px;
+        }
+      }
+    }
+  }
+
+
+
+  /* # Nav
+  ---------------------------------------------------------------------------------------------------- */
+
+  /* # Content
+  ----------------------------------------------------------------------------------------------------- */
+  .entry {
+    padding: 2em;
+  }
+
+  /* # Sidebars
+  ---------------------------------------------------------------------------------------------------- */
+
+  .sidebar {
+    .widget {
+      padding: 2em 0;
+    }
+  }
+
+
+  /* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+  .footer-widgets {
+    background-color: #fff;
+    clear: both;
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 60px 0;
+  }
+
+  .footer-widgets {
+    background-color: $ltgrey;
+    color: $white;
+    clear: both;
+    padding: 2rem 0;
+    a {
+      color: $white;
+    }
+
+    a:hover {
+      color: $offwhite;
+    }
+
+    .widget {
+      margin: 2rem auto;
+      float: none;
+      clear: both;
+      display: block;
+      text-align: center;
+    }
+    .connected-social{
+    }
+    .search-form input:focus {
+      border: 0 solid #ddd;
+    }
+    .widget.widget_nav_menu{
+      text-align: left;
+      ul.menu{
+        width: 75%;
+        margin: 0 auto;
+        -moz-column-count: 5;
+        -moz-column-gap: 30px;
+        -webkit-column-count: 5;
+        -webkit-column-gap: 30px;
+        column-count: 5;
+        column-gap: 30px;
+        >li{
+          -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+          break-inside: avoid;
+          >a{
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+          .sub-menu{
+            margin-bottom: 1em;
+            li{
+              margin-left: 0;
+            }
+            .sub-menu{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  /* # Site Footer
+  ---------------------------------------------------------------------------------------------------- */
+
+  .site-footer {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-align: left;
+    .wrap{
+      background: linear-gradient(to right, $white 0%, $white 33%, rgb(240, 247, 240) 33.01%, $ltgreen 100%);
+      padding: 2em 0;
+    }
+    .social-media{
+      margin: 1rem 0;
+      float: none;
+      margin: 0 auto;
+      a,a:hover{
+        float: none;
+        display: inline-block;
+        &:before{
+          opacity: 1;
+        }
+      }
+      a.fa{
+        font-size: 2rem;
+        height: 2em;
+        line-height: 2;
+        margin: 10px;
+        width: 2em;
+      }
+    }
+  }
+
+  .site-footer p {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,176 @@
+
+
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+  background-color: $white;
+}
+
+.site-header > .wrap {
+  padding: 20px 0;
+  &:after{
+    @include clearfix;
+  }
+}
+
+/* ## Title Area
+--------------------------------------------- */
+
+.title-area {
+  float: left;
+  padding: 10px 0;
+  width: 300px;
+}
+
+.header-image .title-area {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 33%;
+  padding: 0;
+}
+
+.header-full-width .title-area {
+  float: none;
+  width: 100%;
+}
+
+.site-title {
+  font-size: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Logo, hide text */
+
+.header-image .site-description,
+.header-image .site-title a {
+  display: block;
+  text-indent: -9999px;
+}
+
+.header-image .site-title > a {
+  background-position: top left;
+  background-size: contain !important;
+  float: left;
+  min-height: 80px;
+  width: 100%;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+}
+
+.site-description {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.site-description,
+.site-title {
+  margin-bottom: 0;
+}
+
+.header-image .site-description,
+.header-image .site-title {
+  display: block;
+  text-indent: -9999px;
+}
+
+/* Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area, .pre-header .widget-area {
+  float: right;
+  text-align: right;
+  clear: right;
+  line-height: 1;
+  .widget{
+    display: inline-block;
+  }
+  .widget_nav_menu{
+    position: relative;
+    top: -0.8rem;
+    nav{
+      ul{
+        li{
+          padding: 0.4rem;
+          border: 1px solid $offwhite;
+          margin-left: -0.4rem;
+          a{
+            padding: 0;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: $ltgrey;
+          }
+          a:after{
+            @include fontawesome;
+            padding: 0 0.2rem 0 0.4rem;
+          }
+        }
+        li.register{
+          border-radius: 6px 0 0 6px;
+          a:after{
+            content: "\f007";
+          }
+        }
+        li.login{
+          border-radius: 0 6px 6px 0;
+          border-left: 0;
+          a:after{
+            content: "\f023";
+          }
+        }
+        li:hover{
+          a{
+            color: $medgrey;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-header .widget-area {
+  float: right;
+  text-align: right;
+}
+
+.page-title-area{
+  background: $white;
+  .banner{
+    .wrap{
+      background-repeat: no-repeat;
+      background-size: contain;
+      .gradient{
+        padding: 1em;
+        background: linear-gradient(to right, rgba($white,1) 0%, rgba($white,0) 4%, rgba($white,0) 96%, rgba($white,1) 100%);
+        min-height: 45vw;
+        .bannertext{
+          width: 50%;
+        }
+      }
+    }
+    &.imageleft .wrap{
+      background-position: center left;
+      .bannertext{
+        float: right;
+      }
+    }
+    &.imageright .wrap{
+      background-position: center right;
+      .bannertext{
+        float: left;
+      }
+    }
+  }
+}
