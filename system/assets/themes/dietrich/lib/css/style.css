@@ -1574,7 +1574,7 @@ p.entry-meta {
   color: #666; }
 
 .addborder {
-  border: 4px solid #FFF; }
+  border: 0.25em solid #FFF; }
 
 .nobr {
   white-space: nowrap; }

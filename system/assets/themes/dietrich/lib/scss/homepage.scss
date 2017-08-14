@@ -1,6 +1,18 @@
 @import "bootstrap-overrides.scss";
 @import "mixins.scss";
 
+.entry-content{
+  .col-md-4{
+    @include serif(1.6);
+    line-height: 1.25;
+    font-weight: 600;
+    text-align: center;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
 
 }
