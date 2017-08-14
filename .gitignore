@@ -91,6 +91,7 @@ local.properties
 
 # CDT-specific
 .cproject
+.idea
 
 # PDT-specific
 .buildpath
@@ -98,3 +99,4 @@ local.properties
 # Codekit
 config.codekit
 .codekit-cache
+*codekit*
