@@ -100,3 +100,6 @@ local.properties
 config.codekit
 .codekit-cache
 *codekit*
+
+.sass-cache
+.sass-cache/*
