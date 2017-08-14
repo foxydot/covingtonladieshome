@@ -44,6 +44,69 @@
   margin-top: 24px;
 }
 
+.sidebar{
+  .textwidget{
+    .clh2017gala {
+      background: url('../images/2017_clh_gala_bkg.png');
+      padding-top: 1em;
+      .save {
+        @include sansserif(0.9);
+        font-weight: 800;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .date {
+        @include serif(1.6);
+        font-weight: 600;
+        color: $white;
+        text-align: center;
+      }
+      .year {
+        @include serif(3);
+        color: $blue;
+        text-align: center;
+        line-height: 1.25;
+        letter-spacing: 1em;
+        margin-right: -1em
+      }
+      .clh {
+        @include serif(1.2);
+        font-weight: 900;
+        color: $blue;
+        line-height: 1.25;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .gala {
+        @include serif(4);
+        color: $blue;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.25;
+        letter-spacing: 0.5em;
+        margin-right: -0.5em
+      }
+      .tix {
+        @include serif(1.4);
+        display: block;
+        text-decoration: none;
+        background: linear-gradient(to right, rgba(123,171,246,0.3) 0%, rgba(123,171,246,0.9) 33%, rgba(123,171,246,0.9) 66%, rgba(123,171,246,0.3) 100%);
+        color: $white;
+        text-align: center;
+        padding: 0.3em 0;
+      }
+    }
+  }
+  .featured-content{
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+    .entry-content{
+      font-size: 0.9em;
+    }
+  }
+}
+
 /* ## Jetpack
 --------------------------------------------- */
 
@@ -65,6 +128,7 @@
       }
     }
     .gform_body {
+      @include sansserif();
       li.gfield {
         background: $input_bkg;
         label {
@@ -83,6 +147,7 @@
       }
     }
     .gform_footer {
+      @include sansserif();
       input.button,
       input[type=submit] {
         width: 100%;

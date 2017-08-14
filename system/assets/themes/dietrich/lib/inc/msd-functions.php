@@ -20,6 +20,11 @@ function msdlab_get_excerpt( $post_id, $excerpt_length = 50, $trailing_character
     return $the_excerpt;
 }
 
+/* Change Excerpt length */
+function msdlab_excerpt_length( $length ) {
+    return 20;
+}
+
 // cleanup tinymce for SEO
 function fb_change_mce_buttons( $initArray ) {
 	$initArray['theme_advanced_blockformats'] = 'p,address,pre,code,h3,h4,h5,h6';

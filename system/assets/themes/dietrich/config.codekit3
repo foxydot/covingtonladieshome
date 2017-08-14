@@ -41,6 +41,17 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/lib\/images\/2017_clh_gala_bkg.png": {
+		"ft": 32768,
+		"iS": 117359,
+		"oA": 0,
+		"oAP": "\/lib\/images\/2017_clh_gala_bkg.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/lib\/images\/favicon.ico": {
 		"ft": 8192,
 		"oA": 2,
@@ -449,6 +460,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/lib\/scss\/.sass-cache\/b3aabffdb81446d13484a2c6116733e15835d9d0\/_content.scssc",
+		"oF": 0
+		},
+	"\/lib\/scss\/.sass-cache\/b3aabffdb81446d13484a2c6116733e15835d9d0\/_custom.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/lib\/scss\/.sass-cache\/b3aabffdb81446d13484a2c6116733e15835d9d0\/_custom.scssc",
 		"oF": 0
 		},
 	"\/lib\/scss\/.sass-cache\/b3aabffdb81446d13484a2c6116733e15835d9d0\/_defaults.scssc": {
