@@ -181,7 +181,8 @@ h1 {
 
 h2 {
   font-size: 30px;
-  font-size: 3rem; }
+  font-size: 3rem;
+  color: #3f829c; }
 
 h3 {
   font-size: 24px;
@@ -1345,6 +1346,9 @@ address {
 .entry-content code {
   background-color: #333;
   color: #eee; }
+
+.entry-content strong {
+  color: #3f829c; }
 
 /* ## Entry Meta
 --------------------------------------------- */
