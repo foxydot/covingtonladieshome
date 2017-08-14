@@ -111,8 +111,8 @@
 }
 
 .widget-title {
-  font-size: 18px;
-  font-size: 1.8rem;
+  @include serif(1.6);
+  color: $blue;
   margin-bottom: 20px;
 }
 

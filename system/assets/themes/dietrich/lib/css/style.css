@@ -106,12 +106,12 @@ textarea:focus,
   transition: all 0.1s ease-in-out; }
 
 a {
-  color: #457d94;
+  color: #3f829c;
   text-decoration: underline; }
 
 a:focus,
 a:hover {
-  color: #25424e;
+  color: #224553;
   text-decoration: none; }
 
 p {
@@ -616,21 +616,23 @@ th:first-child {
   font-family: "Martel", "Times New Roman", sans-serif;
   font-weight: 400;
   font-size: 2em;
-  color: #457d94;
+  color: #3f829c;
   font-weight: 400; }
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: #457d94;
+  color: #3f829c;
   text-decoration: none; }
 
 .entry-title a:focus,
 .entry-title a:hover {
-  color: #25424e; }
+  color: #224553; }
 
 .widget-title {
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-family: "Martel", "Times New Roman", sans-serif;
+  font-weight: 400;
+  font-size: 1.6em;
+  color: #3f829c;
   margin-bottom: 20px; }
 
 /* ## WordPress
@@ -715,7 +717,9 @@ address {
 /* # Widgets
 ---------------------------------------------------------------------------------------------------- */
 .widget {
-  margin-bottom: 40px;
+  font-family: "Martel", "Times New Roman", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
   word-wrap: break-word; }
 
 .widget p:last-child,
@@ -797,6 +801,68 @@ address {
 .enews form + p {
   margin-top: 24px; }
 
+.sidebar .textwidget .clh2017gala {
+  background: url("../images/2017_clh_gala_bkg.png");
+  padding-top: 1em; }
+  .sidebar .textwidget .clh2017gala .save {
+    font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase; }
+  .sidebar .textwidget .clh2017gala .date {
+    font-family: "Martel", "Times New Roman", sans-serif;
+    font-weight: 400;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #FFF;
+    text-align: center; }
+  .sidebar .textwidget .clh2017gala .year {
+    font-family: "Martel", "Times New Roman", sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+    color: #3f829c;
+    text-align: center;
+    line-height: 1.25;
+    letter-spacing: 1em;
+    margin-right: -1em; }
+  .sidebar .textwidget .clh2017gala .clh {
+    font-family: "Martel", "Times New Roman", sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #3f829c;
+    line-height: 1.25;
+    text-align: center;
+    text-transform: uppercase; }
+  .sidebar .textwidget .clh2017gala .gala {
+    font-family: "Martel", "Times New Roman", sans-serif;
+    font-weight: 400;
+    font-size: 4em;
+    color: #3f829c;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.25;
+    letter-spacing: 0.5em;
+    margin-right: -0.5em; }
+  .sidebar .textwidget .clh2017gala .tix {
+    font-family: "Martel", "Times New Roman", sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(to right, rgba(123, 171, 246, 0.3) 0%, rgba(123, 171, 246, 0.9) 33%, rgba(123, 171, 246, 0.9) 66%, rgba(123, 171, 246, 0.3) 100%);
+    color: #FFF;
+    text-align: center;
+    padding: 0.3em 0; }
+.sidebar .featured-content {
+  border-top: 1px solid #3f829c;
+  border-bottom: 1px solid #3f829c; }
+  .sidebar .featured-content .entry-content {
+    font-size: 0.9em; }
+
 /* ## Jetpack
 --------------------------------------------- */
 #wpstats {
@@ -811,22 +877,30 @@ address {
     font-family: "Martel", "Times New Roman", sans-serif;
     font-weight: 400;
     font-size: 1.2em;
-    color: #457d94;
+    color: #3f829c;
     font-weight: 600; }
-  .site-inner .gform_wrapper .gform_body li.gfield {
-    background: #eaf3fc; }
-    .site-inner .gform_wrapper .gform_body li.gfield label {
-      padding: 0 1em;
-      font-size: 0.7em;
-      font-weight: 400; }
-    .site-inner .gform_wrapper .gform_body li.gfield .ginput_container input, .site-inner .gform_wrapper .gform_body li.gfield .ginput_container textarea {
-      border: 0; }
-    .site-inner .gform_wrapper .gform_body li.gfield.white {
-      background: none; }
-  .site-inner .gform_wrapper .gform_footer input.button,
-  .site-inner .gform_wrapper .gform_footer input[type=submit] {
-    width: 100%;
-    display: block; }
+  .site-inner .gform_wrapper .gform_body {
+    font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1em; }
+    .site-inner .gform_wrapper .gform_body li.gfield {
+      background: #eaf3fc; }
+      .site-inner .gform_wrapper .gform_body li.gfield label {
+        padding: 0 1em;
+        font-size: 0.7em;
+        font-weight: 400; }
+      .site-inner .gform_wrapper .gform_body li.gfield .ginput_container input, .site-inner .gform_wrapper .gform_body li.gfield .ginput_container textarea {
+        border: 0; }
+      .site-inner .gform_wrapper .gform_body li.gfield.white {
+        background: none; }
+  .site-inner .gform_wrapper .gform_footer {
+    font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1em; }
+    .site-inner .gform_wrapper .gform_footer input.button,
+    .site-inner .gform_wrapper .gform_footer input[type=submit] {
+      width: 100%;
+      display: block; }
 
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
@@ -1085,7 +1159,7 @@ address {
   text-align: left; }
 
 .genesis-nav-menu a {
-  color: #457d94;
+  color: #3f829c;
   display: block;
   padding: 0 0.5em;
   text-decoration: none; }
@@ -1095,11 +1169,11 @@ address {
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #457d94;
+  color: #3f829c;
   text-decoration: none; }
 
 .genesis-nav-menu .sub-menu {
-  border-top: 1px solid #457d94;
+  border-top: 1px solid #3f829c;
   left: -9999px;
   opacity: 0;
   position: absolute;
@@ -1109,7 +1183,7 @@ address {
 
 .genesis-nav-menu .sub-menu a {
   background-color: #fff;
-  border: 1px solid #457d94;
+  border: 1px solid #3f829c;
   border-top: 0;
   font-size: 14px;
   font-size: 1.4rem;
@@ -1174,7 +1248,7 @@ address {
       background: transparent;
       border: 0 none;
       clip: auto;
-      color: #457d94;
+      color: #3f829c;
       display: inline-block;
       font-size: 1.2rem;
       height: 18px;
@@ -1495,6 +1569,12 @@ p.entry-meta {
   font-size: 1em;
   color: #666; }
 
+.addborder {
+  border: 4px solid #FFF; }
+
+.nobr {
+  white-space: nowrap; }
+
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
   --------------------------------------------- */
@@ -1519,11 +1599,13 @@ p.entry-meta {
   /* # Structure
   ---------------------------------------------------------------------------------------------------- */
   .site-inner {
-    background: linear-gradient(to right, #FFF 0%, #FFF 33%, #f0f7f0 33.01%, #bbdbc3 100%); }
-    .site-inner .content-sidebar-wrap {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
+    background: none; }
+    .site-inner .wrap {
+      background: linear-gradient(to right, #FFF 0%, #FFF 33%, #f0f7f0 33.01%, #bbdbc3 100%); }
+      .site-inner .wrap .content-sidebar-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
 
   /* ## Column Widths and Positions
 --------------------------------------------- */

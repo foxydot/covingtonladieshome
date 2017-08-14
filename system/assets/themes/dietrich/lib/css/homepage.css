@@ -22,3 +22,9 @@
 /* Neutrals */
 /* Default Colors */
 /* Social Colors */
+@media only screen and (min-width: 1024px) {
+  .page-title-area .banner .wrap .gradient .bannertext {
+    margin-top: 12em;
+    padding-right: 6em; }
+  .sidebar {
+    padding-right: 2em; } }

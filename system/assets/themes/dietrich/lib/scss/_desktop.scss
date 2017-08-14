@@ -10,9 +10,12 @@
   ---------------------------------------------------------------------------------------------------- */
 
   .site-inner{
-    background: linear-gradient(to right, $white 0%, $white 33%, rgb(240, 247, 240) 33.01%, $ltgreen 100%);
-    .content-sidebar-wrap{
-      display: flex;
+    background: none;
+    .wrap {
+      background: linear-gradient(to right, $white 0%, $white 33%, rgb(240, 247, 240) 33.01%, $ltgreen 100%);
+      .content-sidebar-wrap {
+        display: flex;
+      }
     }
   }
 

@@ -134,6 +134,7 @@ add_action('genesis_after_header','msdlab_do_title_area');
 
 //add_action('genesis_before_entry','msd_post_image');//add the image above the entry
 
+add_filter( 'excerpt_length', 'msdlab_excerpt_length', 999 );
 add_filter('excerpt_more', 'msdlab_read_more_link');
 add_filter( 'the_content_more_link', 'msdlab_read_more_link' );
 

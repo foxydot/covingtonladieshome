@@ -281,7 +281,7 @@ function msdlab_get_thumbnail_url($post_id = null, $size = 'post-thumbnail'){
  * Previous next links
  */
 function msdlab_read_more_link() {
-    return '&hellip;&nbsp;<a class="more-link" href="' . get_permalink() . '">Read More <i class="fa fa-angle-right"></i></a>';
+    return '<a class="more-link nobr" href="' . get_permalink() . '">&hellip;read more</a>';
 }
 
 function msdlab_older_link_text($content) {
