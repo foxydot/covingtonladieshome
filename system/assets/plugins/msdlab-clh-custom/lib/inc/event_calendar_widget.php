@@ -261,12 +261,20 @@ function msdlab_get_events_calendar( $initial = true, $echo = true ) {
 	<tr>';
 
     $daywithpost = array();
+    $dayswithposts = array();
 
-    // Get days with posts
-    $dayswithposts = $wpdb->get_results("SELECT DISTINCT DAYOFMONTH(post_date)
-		FROM $wpdb->posts WHERE post_date >= '{$thisyear}-{$thismonth}-01 00:00:00'
-		AND post_type = 'tribe_events' AND post_status = 'publish'
-		AND post_date <= '{$thisyear}-{$thismonth}-{$last_day} 23:59:59'", ARRAY_N);
+    $monthevents = tribe_get_events(array('start_date'=>$thisyear.'-'.$thismonth.'-01 00:00:00','end_date'=>$thisyear.'-'.$thismonth.'-'.$last_day.' 23:59:59','hide_upcoming'=>false));
+
+    //create dayswithposts from monthevents array.
+    foreach($monthevents AS $event){
+        if(date('d',strtotime($event->EventStartDate)) == date('d',strtotime($event->EventEndDate))){
+            $dayswithposts[][] = date('d',strtotime($event->EventStartDate));
+        } else {
+            for ($i=date('d',strtotime($event->EventStartDate)); $i<=date('d',strtotime($event->EventEndDate)); $i++){
+                $dayswithposts[][] = $i;
+            }
+        }
+    }
     if ( $dayswithposts ) {
         foreach ( (array) $dayswithposts as $daywith ) {
             $daywithpost[] = $daywith[0];
@@ -300,10 +308,10 @@ function msdlab_get_events_calendar( $initial = true, $echo = true ) {
             // any posts today?
             $date_format = date( _x( 'F j, Y', 'daily archives date format' ), strtotime( "{$thisyear}-{$thismonth}-{$day}" ) );
             /* translators: Post calendar label. 1: Date */
-            $label = sprintf( __( 'Posts published on %s' ), $date_format );
+            $label = sprintf( __( 'Events on %s' ), $date_format );
             $calendar_output .= sprintf(
                 '<a href="%s" aria-label="%s">%s</a>',
-                get_day_link( $thisyear, $thismonth, $day ),
+                tribe_get_day_link( $thisyear.'-'.$thismonth.'-'.$day),
                 esc_attr( $label ),
                 $day
             );
