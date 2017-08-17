@@ -766,6 +766,32 @@ address {
   font-size: 20px;
   font-size: 2rem; }
 
+.events_calendar_widget caption {
+  text-align: center; }
+.events_calendar_widget table thead th {
+  text-align: center; }
+.events_calendar_widget table tbody {
+  border: 0; }
+  .events_calendar_widget table tbody tr td {
+    border: 0;
+    text-align: center;
+    padding: 0 6px; }
+    .events_calendar_widget table tbody tr td a {
+      display: block;
+      background: #78b2c9;
+      border-radius: 100%;
+      color: #FFF;
+      text-decoration: none;
+      width: 2em; }
+.events_calendar_widget table tfoot {
+  border: 0; }
+  .events_calendar_widget table tfoot tr td {
+    border: 0; }
+    .events_calendar_widget table tfoot tr td#next {
+      text-align: right; }
+    .events_calendar_widget table tfoot tr td a {
+      text-decoration: none; }
+
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */
 /* ## Genesis eNews Extended
