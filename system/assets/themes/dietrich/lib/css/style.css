@@ -777,7 +777,7 @@ address {
     text-align: center;
     padding: 0 6px; }
     .events_calendar_widget table tbody tr td a {
-      display: block;
+      display: inline-block;
       background: #78b2c9;
       border-radius: 100%;
       color: #FFF;
