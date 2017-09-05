@@ -570,6 +570,10 @@ th:first-child {
 .author-box p:last-child {
   margin-bottom: 0; }
 
+.genesis-responsive-menu .genesis-nav-menu a:focus,
+.genesis-responsive-menu .genesis-nav-menu a:hover {
+  color: #b1536f; }
+
 /* ## Search Form
 --------------------------------------------- */
 .search-form {
