@@ -1057,6 +1057,9 @@ address {
     background-position: center center; }
     .page-title-area .banner.imagecenter .wrap .bannertext {
       float: left; }
+  .page-title-area .history-banner h1 {
+    text-transform: capitalize;
+    font-size: 1em; }
 
 @media only screen and (max-width: 767px) {
   .genesis-responsive-menu .wrap {
