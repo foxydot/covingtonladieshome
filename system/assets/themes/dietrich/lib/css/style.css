@@ -528,7 +528,7 @@ th:first-child {
   clear: both;
   margin-left: 0; }
 
-row {
+.row {
   margin: 0; }
 
 /* # Common Classes
