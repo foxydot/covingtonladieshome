@@ -1057,7 +1057,7 @@ address {
     background-position: center center; }
     .page-title-area .banner.imagecenter .wrap .bannertext {
       float: left; }
-  .page-title-area .history-banner h1 {
+  .page-title-area .history-banner h1.entry-title {
     text-transform: capitalize;
     font-size: 1em; }
 
