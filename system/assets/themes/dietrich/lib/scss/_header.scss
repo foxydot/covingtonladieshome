@@ -183,9 +183,13 @@
     h1.entry-title {
       text-transform: uppercase;
       font-size: 1em;
+      position: relative;
+      top: 250px;
     }
     h2 {
-      font-size: 4em;
+      font-size: 2em;
+      position: relative;
+      top: 250px;
     }
   }
 }

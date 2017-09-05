@@ -1059,9 +1059,13 @@ address {
       float: left; }
   .page-title-area .history-banner h1.entry-title {
     text-transform: uppercase;
-    font-size: 1em; }
+    font-size: 1em;
+    position: relative;
+    top: 250px; }
   .page-title-area .history-banner h2 {
-    font-size: 4em; }
+    font-size: 2em;
+    position: relative;
+    top: 250px; }
 
 @media only screen and (max-width: 767px) {
   .genesis-responsive-menu .wrap {
