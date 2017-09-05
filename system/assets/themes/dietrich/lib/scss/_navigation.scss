@@ -184,8 +184,8 @@
   word-wrap: break-word;
 }
 
-.genesis-nav-menu .sub-menu a:before {
-  content: ">";
+.genesis-nav-menu .sub-menu a::before {
+  content: "> ";
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {
