@@ -50,6 +50,11 @@
   margin-bottom: 0;
 }
 
+.genesis-responsive-menu .genesis-nav-menu a:focus,
+.genesis-responsive-menu .genesis-nav-menu a:hover {
+  color: $linkred; 
+}
+
 /* ## Search Form
 --------------------------------------------- */
 

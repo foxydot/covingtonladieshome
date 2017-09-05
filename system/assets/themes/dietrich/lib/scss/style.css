@@ -111,7 +111,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #6d3143;
+  color: #4a212d;
   text-decoration: none; }
 
 p {
@@ -569,10 +569,6 @@ th:first-child {
 .archive-description p:last-child,
 .author-box p:last-child {
   margin-bottom: 0; }
-
-.genesis-responsive-menu .genesis-nav-menu a:focus,
-.genesis-responsive-menu .genesis-nav-menu a:hover {
-  color: #b1536f; }
 
 /* ## Search Form
 --------------------------------------------- */
