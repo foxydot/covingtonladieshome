@@ -181,8 +181,11 @@
   }
   .history-banner{
     h1.entry-title {
-      text-transform: capitalize;
+      text-transform: uppercase;
       font-size: 1em;
+    }
+    h2 {
+      font-size: 4em;
     }
   }
 }
