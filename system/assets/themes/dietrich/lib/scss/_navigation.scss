@@ -185,7 +185,8 @@
 }
 
 .genesis-nav-menu .sub-menu a::before {
-  content: ">&nbsp;&nbsp;";
+  content: ">";
+  padding-left: 2px;
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {

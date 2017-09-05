@@ -1215,7 +1215,8 @@ address {
   word-wrap: break-word; }
 
 .genesis-nav-menu .sub-menu a::before {
-  content: ">&nbsp;&nbsp;"; }
+  content: ">";
+  padding-left: 2px; }
 
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -56px 0 0 199px; }
