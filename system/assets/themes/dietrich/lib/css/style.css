@@ -1057,15 +1057,6 @@ address {
     background-position: center center; }
     .page-title-area .banner.imagecenter .wrap .bannertext {
       float: left; }
-  .page-title-area .banner .history-banner h1.entry-title {
-    text-transform: uppercase;
-    font-size: 1em;
-    position: relative;
-    top: 250px; }
-  .page-title-area .banner .history-banner h2 {
-    font-size: 2em;
-    position: relative;
-    top: 250px; }
 
 @media only screen and (max-width: 767px) {
   .genesis-responsive-menu .wrap {
@@ -1842,6 +1833,15 @@ p.entry-meta {
       background-position: center center; }
       .page-title-area .banner .texturize .gradient {
         min-height: 400px; }
+      .page-title-area .banner .history-banner h1.entry-title {
+        text-transform: uppercase;
+        font-size: 1em;
+        position: relative;
+        top: 250px; }
+      .page-title-area .banner .history-banner h2 {
+        font-size: 2em;
+        position: relative;
+        top: 250px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
