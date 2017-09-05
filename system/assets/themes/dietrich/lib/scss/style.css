@@ -106,12 +106,12 @@ textarea:focus,
   transition: all 0.1s ease-in-out; }
 
 a {
-  color: #3f829c;
+  color: #b1536f;
   text-decoration: underline; }
 
 a:focus,
 a:hover {
-  color: #224553;
+  color: #6d3143;
   text-decoration: none; }
 
 p {
@@ -555,8 +555,7 @@ th:first-child {
   margin-bottom: 1px;
   padding: 12px 30px;
   float: none;
-  clear: both;
-  display: none; }
+  clear: both; }
 
 .after-entry,
 .archive-description,
