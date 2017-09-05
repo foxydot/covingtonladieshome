@@ -528,9 +528,6 @@ th:first-child {
   clear: both;
   margin-left: 0; }
 
-.row {
-  margin: 0; }
-
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */
 /* ## Avatar
@@ -1055,6 +1052,10 @@ address {
   .page-title-area .banner.imageright .wrap {
     background-position: center right; }
     .page-title-area .banner.imageright .wrap .bannertext {
+      float: left; }
+  .page-title-area .banner.imagecenter .wrap {
+    background-position: center center; }
+    .page-title-area .banner.imagecenter .wrap .bannertext {
       float: left; }
 
 @media only screen and (max-width: 767px) {

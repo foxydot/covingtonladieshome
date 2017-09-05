@@ -172,5 +172,11 @@
         float: left;
       }
     }
+    &.imagecenter .wrap{
+      background-position: center center;
+      .bannertext{
+        float: left;
+      }
+    }
   }
 }
