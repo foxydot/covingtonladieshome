@@ -1195,7 +1195,8 @@ address {
 
 .genesis-nav-menu .sub-menu {
   left: -9999px;
-  opacity: 0;
+  background-color: #fff;
+  opacity: 0.5;
   position: absolute;
   -webkit-transition: opacity .4s ease-in-out;
   -moz-transition: opacity .4s ease-in-out;
@@ -1206,8 +1207,6 @@ address {
   z-index: 99; }
 
 .genesis-nav-menu .sub-menu a {
-  background-color: #fff;
-  opacity: 1;
   border-top: 0;
   font-size: 14px;
   font-size: 1.4rem;
