@@ -1843,6 +1843,9 @@ p.entry-meta {
       font-size: 2em;
       position: relative;
       top: 250px; }
+    .page-title-area .staff-banner h1.entry-title {
+      position: relative;
+      top: 250px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
