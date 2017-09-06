@@ -595,16 +595,6 @@ th:first-child {
 .search-form input[type="submit"] {
   margin-top: 10px; }
 
-.genesis-nav-menu .search input[type="submit"],
-.widget_search input[type="submit"] {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
 /* ## Titles
 --------------------------------------------- */
 .archive-description .entry-title,
@@ -1246,31 +1236,34 @@ address {
 /* ## After Header Navigation
 --------------------------------------------- */
 .nav-primary {
-  max-width: 66%;
   padding-top: 5.5em;
   float: right;
   text-transform: uppercase; }
-  .nav-primary .search-form {
+  .nav-primary li.right.search .search-form {
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    width: 0;
     display: inline-block;
     padding: 0;
     margin-left: 1rem;
-    position: relative;
+    position: absolute;
     white-space: nowrap;
-    overflow: visible; }
-    .nav-primary .search-form input[type="search"] {
+    overflow: hidden; }
+    .nav-primary li.right.search .search-form input[type="search"] {
       transition: all 0.5s ease-in-out;
-      position: absolute;
+      position: relative;
       right: 22px;
       font-size: 1.4rem;
       background: #eaf3fc;
       padding: 0;
       border: 0;
-      width: 0; }
-      .nav-primary .search-form input[type="search"]:focus {
+      width: 22px; }
+      .nav-primary li.right.search .search-form input[type="search"]:focus {
         padding: 0.5em 2.4em 0.5em 1em;
         width: 25rem;
         z-index: 999; }
-    .nav-primary .search-form input[type="submit"] {
+    .nav-primary li.right.search .search-form input[type="submit"] {
       font-family: FontAwesome;
       background: transparent;
       border: 0 none;

@@ -97,6 +97,7 @@ if(class_exists('MSDLab_Subtitle_Support')){
 add_action('wp_head','msdlab_maybe_wrap_inner');
 add_filter( 'genesis_search_text', 'msdlab_search_text' ); //customizes the serach bar placeholder
 add_filter('genesis_search_button_text', 'msdlab_search_button'); //customize the search form to add fontawesome search button.
+//add_filter('genesis_search_form', 'msdlab_sliding_search_form');
 
 /**
  * Move secodary nav into pre-header
