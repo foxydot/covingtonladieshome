@@ -106,12 +106,12 @@ textarea:focus,
   transition: all 0.1s ease-in-out; }
 
 a {
-  color: #3f829c;
+  color: #b1536f;
   text-decoration: underline; }
 
 a:focus,
 a:hover {
-  color: #224553;
+  color: #6d3143;
   text-decoration: none; }
 
 p {
@@ -454,17 +454,13 @@ th:first-child {
 /* ### Content */
 .content {
   float: none;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1; }
+  order: 1; }
 
 .content-sidebar .content,
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content {
   float: none;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2; }
+  order: 2; }
 
 .full-width-content .content {
   width: 100%; }
@@ -476,16 +472,12 @@ th:first-child {
 .sidebar-content .sidebar-primary,
 .sidebar-sidebar-content .sidebar-primary {
   float: none;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2; }
+  order: 2; }
 
 /* ### Secondary Sidebar */
 .sidebar-secondary {
   float: none;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3; }
+  order: 3; }
 
 .content-sidebar-sidebar .sidebar-secondary {
   float: none; }
@@ -1051,6 +1043,10 @@ address {
     background-position: center right; }
     .page-title-area .banner.imageright .wrap .bannertext {
       float: left; }
+  .page-title-area .banner.imagecenter .wrap {
+    background-position: center center; }
+    .page-title-area .banner.imagecenter .wrap .bannertext {
+      float: left; }
 
 @media only screen and (max-width: 767px) {
   .genesis-responsive-menu .wrap {
@@ -1080,7 +1076,7 @@ address {
   .sub-menu-toggle:focus,
   .sub-menu-toggle:hover {
     background: transparent;
-    color: #c3251d;
+    color: #b1536f;
     border-width: 0; }
 
   .menu-toggle {
@@ -1107,13 +1103,15 @@ address {
     display: inline-block;
     text-rendering: auto;
     -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
     transform: rotate(0);
-    transition: -webkit-transform .25s ease-in-out;
-    transition: transform .25s ease-in-out;
-    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
+    -webkit-transition: transform .25s ease-in-out;
+    -ms-transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out; }
 
   .sub-menu-toggle.activated::before {
     -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
 
   .genesis-responsive-menu .genesis-nav-menu .menu-item {
@@ -1128,7 +1126,7 @@ address {
 
   .genesis-responsive-menu .genesis-nav-menu a:focus,
   .genesis-responsive-menu .genesis-nav-menu a:hover {
-    color: #c3251d; }
+    color: #b1536f; }
 
   .genesis-responsive-menu .genesis-nav-menu .menu-item a {
     border: none;
@@ -1186,21 +1184,22 @@ address {
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #3f829c;
+  color: #b1536f;
   text-decoration: none; }
 
 .genesis-nav-menu .sub-menu {
-  border-top: 1px solid #3f829c;
   left: -9999px;
-  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
+  -webkit-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -ms-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
   transition: opacity .4s ease-in-out;
   width: 200px;
   z-index: 99; }
 
 .genesis-nav-menu .sub-menu a {
-  background-color: #fff;
-  border: 1px solid #3f829c;
   border-top: 0;
   font-size: 14px;
   font-size: 1.4rem;
@@ -1208,6 +1207,10 @@ address {
   position: relative;
   width: 200px;
   word-wrap: break-word; }
+
+.genesis-nav-menu .sub-menu a::before {
+  content: ">";
+  margin-right: 10px; }
 
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -56px 0 0 199px; }
@@ -1303,6 +1306,10 @@ address {
         display: block;
         margin-left: 0;
         overflow: hidden;
+        -webkit-transition: all 2s ease-in-out;
+        -moz-transition: all 2s ease-in-out;
+        -ms-transition: all 2s ease-in-out;
+        -o-transition: all 2s ease-in-out;
         transition: all 2s ease-in-out; }
       .widget_advanced_menu .menu > li.current-menu-item > ul.sub-menu, .widget_advanced_menu .menu > li.current-menu-ancestor > ul.sub-menu {
         height: auto;
@@ -1510,6 +1517,7 @@ p.entry-meta {
       column-gap: 30px; }
       .footer-widgets .widget.widget_nav_menu ul.menu > li {
         -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
         break-inside: avoid; }
         .footer-widgets .widget.widget_nav_menu ul.menu > li > a {
           text-transform: uppercase;
@@ -1626,8 +1634,6 @@ p.entry-meta {
     .site-inner .wrap {
       background: linear-gradient(to right, #FFF 0%, #FFF 33%, #f0f7f0 33.01%, #bbdbc3 100%); }
       .site-inner .wrap .content-sidebar-wrap {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex; }
 
   /* ## Column Widths and Positions
@@ -1643,17 +1649,13 @@ p.entry-meta {
   /* ### Content */
   .content {
     float: right;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2; }
+    order: 2; }
 
   .content-sidebar .content,
   .content-sidebar-sidebar .content,
   .sidebar-content-sidebar .content {
     float: left;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
+    order: 1; }
 
   .full-width-content .content {
     width: 100%; }
@@ -1665,9 +1667,8 @@ p.entry-meta {
   .sidebar-content .sidebar-primary,
   .sidebar-sidebar-content .sidebar-primary {
     float: left;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
+    order: 1;
+    width: 30%; }
 
   /* ### Secondary Sidebar */
   .sidebar-secondary {
@@ -1826,6 +1827,24 @@ p.entry-meta {
       background-position: center center; }
       .page-title-area .banner .texturize .gradient {
         min-height: 400px; }
+    .page-title-area .history-banner h1.entry-title {
+      text-transform: uppercase;
+      font-size: 1em;
+      position: relative;
+      top: 250px; }
+    .page-title-area .history-banner h2 {
+      font-size: 2em;
+      position: relative;
+      top: 250px; }
+    .page-title-area .staff-banner h1.entry-title {
+      position: relative;
+      top: 150px; }
+    .page-title-area .employment-banner .wrap {
+      max-height: 120px; }
+    .page-title-area .media-banner h1.entry-title {
+      font-size: 1.5em; }
+    .page-title-area .media-banner .wrap {
+      max-height: 120px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
@@ -1881,6 +1900,7 @@ p.entry-meta {
         column-gap: 30px; }
         .footer-widgets .widget.widget_nav_menu ul.menu > li {
           -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
           break-inside: avoid; }
           .footer-widgets .widget.widget_nav_menu ul.menu > li > a {
             text-transform: uppercase;
@@ -1923,3 +1943,5 @@ p.entry-meta {
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+/*# sourceMappingURL=style.css.map */

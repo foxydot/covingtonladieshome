@@ -23,6 +23,7 @@
 }
 /* Colors */
 $red: #f00;
+$linkred: #b1536f;
 $orange: #f90;
 $yellow: #ff0;
 $green: #0f0;
@@ -59,8 +60,8 @@ $black: #000;
 /* Default Colors */
 $body_bkg: $white;
 $body_txt: $dkgrey;
-$link: $blue;
-$link_hvr: $dkblue;
+$link: $linkred;
+$link_hvr: darken($linkred, 20%);
 $border: $ltgrey;
 $input_bkg: rgb(234, 243, 252);
 $input_border: $ltgrey;
