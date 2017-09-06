@@ -298,11 +298,13 @@
         top:150px;
       }
     }
-    .employment-banner .banner .wrap .gradient {
+    .employment-banner .gradient {
       min-height:120px;
     }
-    .media-banner .banner .wrap .gradient {
-      min-height: 120px;
+    .media-banner {
+      .gradient {
+        min-height: 120px;
+      }
     }
   }
 
