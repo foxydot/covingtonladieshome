@@ -299,11 +299,13 @@
       }
     }
     .employment-banner .gradient {
-      min-height:120px;
+      .wrap{
+        max-height: 120px;
+      }     
     }
     .media-banner {
-      .h1 {
-        font-size: 1em;
+      .h1.entry-title {
+        font-size: 1.5em;
       }
       .wrap{
           max-height: 120px;
