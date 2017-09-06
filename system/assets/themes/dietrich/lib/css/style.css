@@ -1846,6 +1846,10 @@ p.entry-meta {
     .page-title-area .staff-banner h1.entry-title {
       position: relative;
       top: 150px; }
+    .page-title-area .employment-banner {
+      min-height: 120px; }
+    .page-title-area .media-banner {
+      min-height: 120px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
