@@ -1637,7 +1637,8 @@ p.entry-meta {
         display: flex; }
 
   .gala .wrap {
-    background: none; }
+    background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/2017_clh_gala_bkg.png");
+    background-repeat: repeat; }
 
   /* ## Column Widths and Positions
 --------------------------------------------- */
