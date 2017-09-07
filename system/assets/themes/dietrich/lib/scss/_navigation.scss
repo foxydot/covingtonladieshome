@@ -226,47 +226,52 @@
 --------------------------------------------- */
 
 .nav-primary {
-  max-width: 66%;
   padding-top: 5.5em;
   float: right;
   text-transform: uppercase;
-  .search-form{
-    display: inline-block;
-    padding: 0;
-    margin-left: 1rem;
-    position: relative;
-    white-space: nowrap;
-    overflow: visible;
-  input[type="search"]{
-    transition: all 0.5s ease-in-out;
-    position: absolute;
-    right: 22px;
-    font-size: 1.4rem;
-    background: $input_bkg;
-    padding: 0;
-    border: 0;
-    width: 0;
-    &:focus{
-      padding: 0.5em 2.4em 0.5em 1em;
-      width: 25rem;
-      z-index: 999;
+  li.right.search{
+    .search-form{
+      transition-property: width;
+      transition-duration: 2s;
+      transition-timing-function: ease-in;
+      width: 0;
+      display: inline-block;
+      padding: 0;
+      margin-left: 1rem;
+      position: absolute;
+      white-space: nowrap;
+      overflow: hidden;
+    input[type="search"]{
+      transition: all 0.5s ease-in-out;
+      position: relative;
+      right: 22px;
+      font-size: 1.4rem;
+      background: $input_bkg;
+      padding: 0;
+      border: 0;
+      width: 22px;
+      &:focus{
+        padding: 0.5em 2.4em 0.5em 1em;
+        width: 25rem;
+        z-index: 999;
+      }
+    }
+    input[type="submit"]{
+      @include fontawesome;
+      background: transparent;
+      border: 0 none;
+      clip: auto;
+      color: $blue;
+      display: inline-block;
+      font-size: 1.2rem;
+      height: 18px;
+      line-height: 1;
+      text-align: center;
+      width: 18px;
+      top: 0.9rem;
     }
   }
-  input[type="submit"] {
-    @include fontawesome;
-    background: transparent;
-    border: 0 none;
-    clip: auto;
-    color: $blue;
-    display: inline-block;
-    font-size: 1.2rem;
-    height: 18px;
-    line-height: 1;
-    text-align: center;
-    width: 18px;
-    top: 0.9rem;
   }
-}
 }
 
 /* ## Footer Navigation

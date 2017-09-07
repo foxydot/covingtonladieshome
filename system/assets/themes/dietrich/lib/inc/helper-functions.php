@@ -24,7 +24,7 @@ function msdlab_maybe_wrap_inner(){
  * Customize search form input
  */
 function msdlab_search_text($text) {
-    $text = esc_attr( 'Search' );
+    $text = "&#xF002;";
     return $text;
 }
 
@@ -34,6 +34,15 @@ function msdlab_search_text($text) {
 function msdlab_search_button($text) {
     $text = "&#xF002;";
     return $text;
+}
+
+/**
+ * Create a sliding search form
+ */
+function msdlab_sliding_search_form($form){
+    $pattern = '/<\/form>/i';
+    $replacement= '</form><input type="button" class="search-slide-switch" value="'.msdlab_search_button('').'" />';
+    return preg_replace($pattern,$replacement,$form);
 }
 
 /**
