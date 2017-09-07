@@ -1860,7 +1860,7 @@ p.entry-meta {
   .entry {
     padding: 2em; }
 
-  .building-item {
+  div.building-row div.building-item {
     width: 50%; }
 
   /* # Sidebars

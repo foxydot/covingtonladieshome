@@ -340,9 +340,12 @@
     padding: 2em;
   }
   
-  .building-item {
-    width:50%;
+  div.building-row {
+    div.building-item {
+      width:50%;
+    }
   }
+  
 
   /* # Sidebars
   ---------------------------------------------------------------------------------------------------- */
