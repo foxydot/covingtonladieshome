@@ -1883,16 +1883,15 @@ p.entry-meta {
       max-height: 120px; }
       .page-title-area .privacy-banner .wrap .gradient {
         background: none; }
-    .page-title-area .resident-banner {
+    .page-title-area .resident-banner h1.entry-title {
+      text-transform: uppercase;
+      font-size: 2em;
+      position: relative;
+      top: 150px;
       background-color: #fff;
       -webkit-box-shadow: -33px 12px 114px 25px white;
       -moz-box-shadow: -33px 12px 114px 25px white;
       box-shadow: -33px 12px 114px 25px white; }
-      .page-title-area .resident-banner h1.entry-title {
-        text-transform: uppercase;
-        font-size: 2em;
-        position: relative;
-        top: 150px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
