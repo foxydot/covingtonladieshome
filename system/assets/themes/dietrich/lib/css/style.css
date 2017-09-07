@@ -1643,12 +1643,12 @@ p.entry-meta {
     .gala .content article {
       padding-top: 0; }
 
-  .no-green body {
-    background: #fff !important; }
-  .no-green .site-inner .wrap {
+  .no-green {
     background: #fff; }
-  .no-green .site-footer .wrap {
-    background: #fff; }
+    .no-green .site-inner .wrap {
+      background: #fff; }
+    .no-green .site-footer .wrap {
+      background: #fff; }
 
   /* ## Column Widths and Positions
 --------------------------------------------- */
