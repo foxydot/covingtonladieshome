@@ -1189,7 +1189,7 @@ address {
 
 .genesis-nav-menu .sub-menu {
   left: -9999px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   -webkit-transition: opacity .4s ease-in-out;
   -moz-transition: opacity .4s ease-in-out;
