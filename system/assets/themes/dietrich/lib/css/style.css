@@ -1848,6 +1848,8 @@ p.entry-meta {
       top: 150px; }
     .page-title-area .employment-banner .wrap {
       max-height: 120px; }
+      .page-title-area .employment-banner .wrap .gradient {
+        background: none; }
     .page-title-area .media-banner h1.entry-title {
       font-size: 1.5em; }
     .page-title-area .media-banner .wrap {
