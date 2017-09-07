@@ -359,6 +359,14 @@
           top: 250px;
       }
     }
+    .privacy-banner {
+      .wrap{
+        max-height: 120px;
+        .gradient {
+          background: none;
+        }
+      } 
+    }
   }
 
   .page-title-area{

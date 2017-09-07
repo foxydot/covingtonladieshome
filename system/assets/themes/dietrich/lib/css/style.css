@@ -1876,6 +1876,10 @@ p.entry-meta {
       font-size: 2em;
       position: relative;
       top: 250px; }
+    .page-title-area .privacy-banner .wrap {
+      max-height: 120px; }
+      .page-title-area .privacy-banner .wrap .gradient {
+        background: none; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
