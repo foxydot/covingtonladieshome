@@ -29,6 +29,17 @@
       }
     }
   }
+  
+  .no-green {
+    body {
+      background:#fff;
+    }
+    .site-inner {
+      .wrap {
+        background:#fff;
+      }
+    }
+  }
 
   /* ## Column Widths and Positions
 --------------------------------------------- */

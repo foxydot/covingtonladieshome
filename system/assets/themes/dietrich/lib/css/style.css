@@ -1643,6 +1643,11 @@ p.entry-meta {
     .gala .content article {
       padding-top: 0; }
 
+  .no-green body {
+    background: #fff; }
+  .no-green .site-inner .wrap {
+    background: #fff; }
+
   /* ## Column Widths and Positions
 --------------------------------------------- */
   /* ### Wrapping div for .content and .sidebar-primary */
