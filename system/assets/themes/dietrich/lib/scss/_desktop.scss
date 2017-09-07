@@ -363,10 +363,6 @@
       h1.entry-title {
         font-size: 1.3em;
         padding-top:20px;
-        background-color:#fff;
-        -webkit-box-shadow: -33px 12px 114px 25px rgba(255,255,255,1);
-        -moz-box-shadow: -33px 12px 114px 25px rgba(255,255,255,1);
-        box-shadow: -33px 12px 114px 25px rgba(255,255,255,1);
       }
       .wrap{
         max-height: 120px;
@@ -374,6 +370,18 @@
           background: none;
         }
       } 
+    }
+    .resident-banner {
+      h1.entry-title {
+        text-transform: uppercase;
+        font-size: 1em;
+        position: relative;
+        top: 250px;
+      }
+      background-color:#fff;
+      -webkit-box-shadow: -33px 12px 114px 25px rgba(255,255,255,1);
+      -moz-box-shadow: -33px 12px 114px 25px rgba(255,255,255,1);
+      box-shadow: -33px 12px 114px 25px rgba(255,255,255,1);
     }
   }
 
