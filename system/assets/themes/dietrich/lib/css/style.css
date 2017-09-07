@@ -1861,7 +1861,15 @@ p.entry-meta {
     padding: 2em; }
 
   div.building-row div.building-item {
-    width: 50%; }
+    width: 45%;
+    display: inline-block;
+    padding: 0 10px;
+    float: left;
+    font-size: .8em; }
+    div.building-row div.building-item .fa {
+      padding-right: 5px; }
+    div.building-row div.building-item div.building-item-list {
+      padding-top: 10px; }
 
   /* # Sidebars
   ---------------------------------------------------------------------------------------------------- */
