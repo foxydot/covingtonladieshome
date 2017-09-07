@@ -1636,7 +1636,7 @@ p.entry-meta {
       .site-inner .wrap .content-sidebar-wrap {
         display: flex; }
 
-  .gala {
+  .gala .wrap {
     background: none; }
 
   /* ## Column Widths and Positions
