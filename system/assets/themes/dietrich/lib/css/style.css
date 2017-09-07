@@ -1877,7 +1877,8 @@ p.entry-meta {
       position: relative;
       top: 250px; }
     .page-title-area .privacy-banner h1.entry-title {
-      font-size: 1.5em; }
+      font-size: 1.3em;
+      padding-top: 20px; }
     .page-title-area .privacy-banner .wrap {
       max-height: 120px; }
       .page-title-area .privacy-banner .wrap .gradient {
