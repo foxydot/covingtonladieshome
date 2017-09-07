@@ -1868,7 +1868,8 @@ p.entry-meta {
     div.building-row div.building-item .fa {
       padding-right: 5px; }
     div.building-row div.building-item div.building-item-list {
-      padding-top: 10px; }
+      padding-top: 10px;
+      font-size: .8em; }
       div.building-row div.building-item div.building-item-list p {
         font-size: .8em; }
       div.building-row div.building-item div.building-item-list h2 {
