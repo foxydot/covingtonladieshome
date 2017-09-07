@@ -1851,6 +1851,15 @@ p.entry-meta {
         background: none; }
     .page-title-area .building-banner h1.entry-title {
       display: none; }
+    .page-title-area .gala-banner h1.entry-title {
+      text-transform: uppercase;
+      font-size: 1em;
+      position: relative;
+      top: 250px; }
+    .page-title-area .gala-banner h2 {
+      font-size: 2em;
+      position: relative;
+      top: 250px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
