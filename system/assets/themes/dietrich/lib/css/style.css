@@ -1641,7 +1641,7 @@ p.entry-meta {
     background-size: cover;
     background-repeat: no-repeat; }
     .gala .content article {
-      margin-top: 0; }
+      padding-top: 0; }
 
   /* ## Column Widths and Positions
 --------------------------------------------- */
