@@ -1890,9 +1890,9 @@ p.entry-meta {
       box-shadow: -33px 12px 114px 25px white; }
       .page-title-area .resident-banner h1.entry-title {
         text-transform: uppercase;
-        font-size: 1em;
+        font-size: 2em;
         position: relative;
-        top: 250px; }
+        top: 150px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
