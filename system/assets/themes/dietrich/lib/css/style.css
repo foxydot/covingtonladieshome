@@ -1640,6 +1640,8 @@ p.entry-meta {
     background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
     background-size: cover;
     background-repeat: no-repeat; }
+    .gala .content article {
+      margin-top: 0; }
 
   /* ## Column Widths and Positions
 --------------------------------------------- */
