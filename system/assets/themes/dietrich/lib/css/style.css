@@ -1867,6 +1867,15 @@ p.entry-meta {
       font-size: 2em;
       position: relative;
       top: 250px; }
+    .page-title-area .donate-banner h1.entry-title {
+      text-transform: uppercase;
+      font-size: 1em;
+      position: relative;
+      top: 250px; }
+    .page-title-area .donate-banner h2 {
+      font-size: 2em;
+      position: relative;
+      top: 250px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
