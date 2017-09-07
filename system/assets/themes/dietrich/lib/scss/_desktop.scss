@@ -32,9 +32,14 @@
   
   .no-green {
     body {
-      background:#fff;
+      background:#fff !important;
     }
     .site-inner {
+      .wrap {
+        background:#fff;
+      }
+    }
+    .site-footer {
       .wrap {
         background:#fff;
       }

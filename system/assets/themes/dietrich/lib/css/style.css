@@ -1644,8 +1644,10 @@ p.entry-meta {
       padding-top: 0; }
 
   .no-green body {
-    background: #fff; }
+    background: #fff !important; }
   .no-green .site-inner .wrap {
+    background: #fff; }
+  .no-green .site-footer .wrap {
     background: #fff; }
 
   /* ## Column Widths and Positions
