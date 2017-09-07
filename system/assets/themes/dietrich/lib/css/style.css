@@ -1847,6 +1847,8 @@ p.entry-meta {
       font-size: 1.5em; }
     .page-title-area .media-banner .wrap {
       max-height: 120px; }
+      .page-title-area .media-banner .wrap .gradient {
+        background: none; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
