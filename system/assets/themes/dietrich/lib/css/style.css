@@ -1636,8 +1636,9 @@ p.entry-meta {
       .site-inner .wrap .content-sidebar-wrap {
         display: flex; }
 
-  .gala .wrap {
-    background: none; }
+  .gala .content {
+    background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-image.png");
+    background-size: contain; }
 
   /* ## Column Widths and Positions
 --------------------------------------------- */
