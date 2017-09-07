@@ -1636,12 +1636,18 @@ p.entry-meta {
       .site-inner .wrap .content-sidebar-wrap {
         display: flex; }
 
-  .gala .content {
-    background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
-    background-size: cover;
-    background-repeat: no-repeat; }
-    .gala .content article {
-      padding-top: 0; }
+  .gala {
+    background: #fff; }
+    .gala .content {
+      background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .gala .content article {
+        padding-top: 0; }
+    .gala .site-inner .wrap {
+      background: #fff; }
+    .gala .site-footer .wrap {
+      background: #fff; }
 
   .no-green {
     background: #fff; }
