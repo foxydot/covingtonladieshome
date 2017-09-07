@@ -1636,6 +1636,9 @@ p.entry-meta {
       .site-inner .wrap .content-sidebar-wrap {
         display: flex; }
 
+  .gala {
+    background: none; }
+
   /* ## Column Widths and Positions
 --------------------------------------------- */
   /* ### Wrapping div for .content and .sidebar-primary */
