@@ -394,18 +394,22 @@
         .gradient {
           background: none;
         }
-      }
-      .contact-banner {
-        h1.entry-title {
+      }  
+    }
+    .contact-banner {
+      h1.entry-title {
         font-size: 1.5em;
-        }
-        .wrap{
-          max-height: 120px;
-          .gradient {
-            background: none;
-          }  
-        } 
+        background-color:rgba(255,255,255,.9);
+        -webkit-box-shadow: -77px 12px 86px 25px rgba(255,255,255,1);
+        -moz-box-shadow: -77px 12px 86px 25px rgba(255,255,255,1);
+        box-shadow: -77px 12px 86px 25px rgba(255,255,255,1);
       }
+      .wrap{
+        max-height: 120px;
+        .gradient {
+          background: none;
+        }  
+      } 
     }
     .resident-banner {
       h1.entry-title {

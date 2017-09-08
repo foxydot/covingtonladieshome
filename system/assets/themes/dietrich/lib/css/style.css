@@ -1896,11 +1896,15 @@ p.entry-meta {
       max-height: 120px; }
       .page-title-area .privacy-banner .wrap .gradient {
         background: none; }
-    .page-title-area .privacy-banner .contact-banner h1.entry-title {
-      font-size: 1.5em; }
-    .page-title-area .privacy-banner .contact-banner .wrap {
+    .page-title-area .contact-banner h1.entry-title {
+      font-size: 1.5em;
+      background-color: rgba(255, 255, 255, 0.9);
+      -webkit-box-shadow: -77px 12px 86px 25px white;
+      -moz-box-shadow: -77px 12px 86px 25px white;
+      box-shadow: -77px 12px 86px 25px white; }
+    .page-title-area .contact-banner .wrap {
       max-height: 120px; }
-      .page-title-area .privacy-banner .contact-banner .wrap .gradient {
+      .page-title-area .contact-banner .wrap .gradient {
         background: none; }
     .page-title-area .resident-banner h1.entry-title {
       text-transform: uppercase;
