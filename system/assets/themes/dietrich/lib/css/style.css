@@ -908,7 +908,7 @@ address {
     font-size: 1em; }
     .site-inner .gform_wrapper .gform_footer input.button,
     .site-inner .gform_wrapper .gform_footer input[type=submit] {
-      width: 100%;
+      width: 50%;
       display: block; }
 
 /* # Site Header
