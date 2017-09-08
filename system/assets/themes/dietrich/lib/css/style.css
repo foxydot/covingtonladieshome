@@ -277,7 +277,7 @@ figure {
 input,
 select,
 textarea {
-  background-color: #eaf3fc;
+  background-color: #fff;
   border: 1px solid #CCC;
   color: #333;
   font-size: 18px;
@@ -893,7 +893,7 @@ address {
     font-weight: 400;
     font-size: 1em; }
     .site-inner .gform_wrapper .gform_body li.gfield {
-      background: #eaf3fc; }
+      background: #fff; }
       .site-inner .gform_wrapper .gform_body li.gfield label {
         padding: 0 1em;
         font-size: 0.7em;
@@ -1258,7 +1258,7 @@ address {
       position: relative;
       right: 22px;
       font-size: 1.4rem;
-      background: #eaf3fc;
+      background: #fff;
       padding: 0;
       border: 0;
       width: 22px; }
