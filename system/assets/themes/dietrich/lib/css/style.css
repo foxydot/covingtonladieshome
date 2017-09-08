@@ -1946,7 +1946,8 @@ p.entry-meta {
   div.building-row div.building-item-list {
     padding-top: 10px; }
     div.building-row div.building-item-list p {
-      font-size: .8em; }
+      font-size: .8em;
+      padding-bottom: 12px; }
     div.building-row div.building-item-list h2 {
       font-size: 1em; }
 
