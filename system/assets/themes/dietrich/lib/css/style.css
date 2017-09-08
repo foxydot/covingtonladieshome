@@ -1897,11 +1897,14 @@ p.entry-meta {
       .page-title-area .privacy-banner .wrap .gradient {
         background: none; }
     .page-title-area .contact-banner h1.entry-title {
-      font-size: 1.5em;
+      font-size: 2em;
+      width: 43%;
+      position: relative;
+      top: 20px;
       background-color: rgba(255, 255, 255, 0.9);
-      -webkit-box-shadow: -77px 12px 86px 25px white;
-      -moz-box-shadow: -77px 12px 86px 25px white;
-      box-shadow: -77px 12px 86px 25px white; }
+      -webkit-box-shadow: 67px 12px 86px 25px white;
+      -moz-box-shadow: 67px 12px 86px 25px white;
+      box-shadow: 67px 12px 86px 25px white; }
     .page-title-area .contact-banner .wrap {
       max-height: 120px; }
       .page-title-area .contact-banner .wrap .gradient {

@@ -398,11 +398,14 @@
     }
     .contact-banner {
       h1.entry-title {
-        font-size: 1.5em;
+        font-size: 2em;
+        width:43%;
+        position:relative;
+        top:20px;
         background-color:rgba(255,255,255,.9);
-        -webkit-box-shadow: -77px 12px 86px 25px rgba(255,255,255,1);
-        -moz-box-shadow: -77px 12px 86px 25px rgba(255,255,255,1);
-        box-shadow: -77px 12px 86px 25px rgba(255,255,255,1);
+        -webkit-box-shadow: 67px 12px 86px 25px rgba(255,255,255,1);
+        -moz-box-shadow: 67px 12px 86px 25px rgba(255,255,255,1);
+        box-shadow: 67px 12px 86px 25px rgba(255,255,255,1);
       }
       .wrap{
         max-height: 120px;
