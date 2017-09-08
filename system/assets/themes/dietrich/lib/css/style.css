@@ -1951,9 +1951,9 @@ p.entry-meta {
     div.building-row div.building-item-list h2 {
       font-size: 1em; }
 
-  .building h2.padding-top {
+  .building h2 {
     padding-top: 20px; }
-  .building h3.padding-top {
+  .building h3 {
     padding-top: 20px; }
 
   /* # Sidebars
