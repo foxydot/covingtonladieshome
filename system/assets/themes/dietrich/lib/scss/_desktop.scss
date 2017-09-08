@@ -394,7 +394,18 @@
         .gradient {
           background: none;
         }
-      } 
+      }
+      .contact-banner {
+        h1.entry-title {
+        font-size: 1.5em;
+        }
+        .wrap{
+          max-height: 120px;
+          .gradient {
+            background: none;
+          }  
+        } 
+      }
     }
     .resident-banner {
       h1.entry-title {

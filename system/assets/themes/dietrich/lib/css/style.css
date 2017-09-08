@@ -1896,6 +1896,12 @@ p.entry-meta {
       max-height: 120px; }
       .page-title-area .privacy-banner .wrap .gradient {
         background: none; }
+    .page-title-area .privacy-banner .contact-banner h1.entry-title {
+      font-size: 1.5em; }
+    .page-title-area .privacy-banner .contact-banner .wrap {
+      max-height: 120px; }
+      .page-title-area .privacy-banner .contact-banner .wrap .gradient {
+        background: none; }
     .page-title-area .resident-banner h1.entry-title {
       text-transform: uppercase;
       font-size: 2em;
