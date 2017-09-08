@@ -355,7 +355,15 @@
     }
     .building-banner {
       h1.entry-title {
-        display:none;
+        text-transform: uppercase;
+        font-size: 1em;
+        position: relative;
+        top: 250px;
+      }
+      h2 {
+          font-size: 2em;
+          position: relative;
+          top: 250px;
       }
     }
     .gala-banner{

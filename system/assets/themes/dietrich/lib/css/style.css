@@ -1870,7 +1870,14 @@ p.entry-meta {
       .page-title-area .media-banner .wrap .gradient {
         background: none; }
     .page-title-area .building-banner h1.entry-title {
-      display: none; }
+      text-transform: uppercase;
+      font-size: 1em;
+      position: relative;
+      top: 250px; }
+    .page-title-area .building-banner h2 {
+      font-size: 2em;
+      position: relative;
+      top: 250px; }
     .page-title-area .gala-banner h1.entry-title {
       text-transform: uppercase;
       font-size: 1em;
