@@ -24,7 +24,7 @@ function msdlab_maybe_wrap_inner(){
  * Customize search form input
  */
 function msdlab_search_text($text) {
-    $text = "&#xF002;";
+    $text = "Search";
     return $text;
 }
 
