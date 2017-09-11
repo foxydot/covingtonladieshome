@@ -231,46 +231,46 @@
   text-transform: uppercase;
   li.right.search{
     .search-form{
-      transition-property: width;
-      transition-duration: 2s;
-      transition-timing-function: ease-in;
-      width: 0;
+      top: 0.5em;
       display: inline-block;
-      padding: 0;
-      margin-left: 1rem;
-      position: absolute;
-      white-space: nowrap;
-      overflow: hidden;
-    input[type="search"]{
-      transition: all 0.5s ease-in-out;
-      position: relative;
-      right: 22px;
-      font-size: 1.4rem;
-      background: $input_bkg;
-      padding: 0;
-      border: 0;
-      width: 22px;
-      &:focus{
-        padding: 0.5em 2.4em 0.5em 1em;
-        width: 25rem;
-        z-index: 999;
+      margin:0;
+      &:before{
+        @include fontawesome;
+        content: '\f002';
+        position: relative;
+        left: 0.5em;
+      }
+      input[type="search"]{
+        transition-property: width;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        width: 0em;
+        position: relative;
+        font-size: 1.4rem;
+        background: $input_bkg;
+        border: 0;
+        padding: 0.5em 0em 0.5em 1.5em;
+        &:focus{
+          width: 25em;
+          z-index: 999;
+          border-bottom: 1px solid $ltgrey;
+        }
+      }
+      input[type="submit"]{
+        @include fontawesome;
+        background: transparent;
+        border: 0 none;
+        clip: auto;
+        color: $link;
+        display: none;
+        font-size: 1.2rem;
+        height: 18px;
+        line-height: 1;
+        text-align: center;
+        width: 18px;
+        top: 0.9rem;
       }
     }
-    input[type="submit"]{
-      @include fontawesome;
-      background: transparent;
-      border: 0 none;
-      clip: auto;
-      color: $blue;
-      display: inline-block;
-      font-size: 1.2rem;
-      height: 18px;
-      line-height: 1;
-      text-align: center;
-      width: 18px;
-      top: 0.9rem;
-    }
-  }
   }
 }
 
