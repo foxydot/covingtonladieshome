@@ -1,15 +1,15 @@
 <?php global $wpalchemy_media_access; ?>
-<table class="form-table">
+<table class="form-table page-banner-controls">
     <tbody>
     <?php $mb->the_field('bannerbool'); ?>
     <tr valign="top">
         <th scope="row"><label for="bannerbool"></label></th>
         <td>
-            <p><input type="checkbox" name="<?php $mb->the_name(); ?>" value="true"<?php $mb->the_checkbox_state('true'); ?>/> Use page banner?</p>
+            <p><input type="checkbox" id="bannerbool" name="<?php $mb->the_name(); ?>" value="true"<?php $mb->the_checkbox_state('true'); ?>/> Use page banner?</p>
         </td>
     </tr>
     <?php $mb->the_field('banneralign'); ?>
-    <tr valign="top">
+    <tr valign="top" class="switchable">
         <th scope="row"><label for="banneralign"></label>Banner alignment</th>
         <td>
             <p><input type="radio" name="<?php $mb->the_name(); ?>" value="imageleft"<?php $mb->the_radio_state('imageleft'); ?>/> Image left/text right</p>
@@ -17,7 +17,7 @@
         </td>
     </tr>
     <?php $mb->the_field('bannerimage'); ?>
-    <tr valign="top">
+    <tr valign="top" class="switchable">
         <th scope="row"><label for="bannerimage">Banner Image</label></th>
         <td>
             <?php $img_btn_label = "Add Image"; ?>
@@ -36,7 +36,7 @@
         </td>
     </tr>
     <?php $mb->the_field('bannercontent'); ?>
-    <tr valign="top">
+    <tr valign="top" class="switchable">
         <th scope="row"><label for="bannercontent">Banner Content</label></th>
         <td>
             <?php
@@ -48,7 +48,7 @@
         </td>
     </tr>
     <?php $mb->the_field('bannerclass'); ?>
-    <tr valign="top">
+    <tr valign="top" class="switchable">
         <th scope="row"><label for="bannerclass">Any custom class names for banner styling</label></th>
         <td>
             <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>" />
@@ -56,3 +56,18 @@
     </tr>
     </tbody>
 </table>
+<script type="text/javascript">
+    var bannertoggle = jQuery('.page-banner-controls .switchable');
+    if(jQuery('#bannerbool').is(':checked')){
+
+    } else {
+        bannertoggle.hide();
+    }
+    jQuery('#bannerbool').click(function(){
+        if(jQuery(this).is(':checked')){
+            bannertoggle.slideDown(500);
+        } else {
+            bannertoggle.slideUp(500);
+        }
+    });
+</script>
