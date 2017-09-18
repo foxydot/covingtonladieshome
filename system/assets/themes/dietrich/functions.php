@@ -87,10 +87,10 @@ if(class_exists('MSDLab_Genesis_Tweaks')){
     );
     $gtweaks = new MSDLab_Genesis_Tweaks($options);
 }
-if(class_exists('MSDLab_Subtitle_Support')){
+/*if(class_exists('MSDLab_Subtitle_Support')){
     $options = array();
     $subtitle_support = new MSDLab_Subtitle_Support($options);
-}
+}*/
 
 
 /*** HEADER ***/
