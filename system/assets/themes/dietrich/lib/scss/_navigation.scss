@@ -131,7 +131,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .genesis-nav-menu {
-  @include sansserif(1.6);
+  @include sansserif(1.5);
   clear: both;
   font-weight: 800;
   line-height: 1;
@@ -227,6 +227,7 @@
 
 .nav-primary {
   padding-top: 5.5em;
+  padding-right: 3em;
   float: right;
   text-transform: uppercase;
   .menu{position: relative;}

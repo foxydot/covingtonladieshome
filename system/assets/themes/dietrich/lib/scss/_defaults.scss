@@ -10,7 +10,7 @@ html {
 
 /* Chrome fix */
 body {
-  @include sansserif(1);
+  @include serif(1);
   color: $body_txt;
   -webkit-font-smoothing: antialiased;
   line-height: 1.625;

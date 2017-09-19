@@ -5,6 +5,7 @@
 
 .site-header {
   background-color: $white;
+  border-bottom: $clhborder;
 }
 
 .site-header > .wrap {
@@ -147,6 +148,7 @@
 
 .page-title-area{
   background: $white;
+  border-bottom: $clhborder;
   .banner{
     .wrap{
       background-repeat: no-repeat;

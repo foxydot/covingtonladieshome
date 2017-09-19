@@ -6,17 +6,15 @@
 @media print {
   a[href]:after {
     content: "" !important; }
-
   div.pre-header, #sticky-wrapper, header.site-header, aside.sidebar {
     display: none !important; }
-
   div.print-header {
     margin-bottom: 1em; }
-
   main.content {
     width: 100% !important; }
     main.content p {
       page-break-inside: avoid; } }
+
 /* Import Fonts
 ------------------------------------------------------------ */
 /* Font Stacks */
@@ -24,6 +22,7 @@
 /* Neutrals */
 /* Default Colors */
 /* Social Colors */
+/* some elements */
 .entry-content .col-md-4 {
   font-family: "Martel", "Times New Roman", sans-serif;
   font-weight: 400;
@@ -38,8 +37,5 @@
   .page-title-area .banner .wrap .gradient .bannertext {
     margin-top: 12em;
     padding-right: 6em; }
-
   .sidebar {
     padding-right: 2em; } }
-
-/*# sourceMappingURL=homepage.css.map */

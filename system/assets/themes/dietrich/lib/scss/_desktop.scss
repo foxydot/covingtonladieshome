@@ -3,7 +3,14 @@
   /* # Defaults
   ---------------------------------------------------------------------------------------------------- */
   body{
-    background: linear-gradient(to right, $white 0%, $white 50%, $ltgreen 50.1%, $ltgreen 100%);
+    //background: linear-gradient(to right, $white 0%, $white 50%, $ltgreen 50.1%, $ltgreen 100%);
+    background: $white;
+    .site-container{
+      max-width: 1280px;
+      -webkit-box-shadow: 0 0 24px 0 $dkgrey;
+      box-shadow: 0 0 24px 0 $dkgrey;
+      margin: 0 auto;
+    }
   }
 
   /* # Structure
@@ -11,15 +18,17 @@
 
   .site-inner{
     background: none;
+    padding: 0;
     .wrap {
       background: linear-gradient(to right, $white 0%, $white 33%, rgb(240, 247, 240) 33.01%, $ltgreen 100%);
+      padding: 0 30px;
       .content-sidebar-wrap {
         display: flex;
       }
     }
   }
   
-  .gala {
+  .page.gala {
     .content{
       background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
       background-size: cover;
@@ -136,7 +145,7 @@
   }
 
   .site-header > .wrap {
-    padding: 20px 0;
+    padding: 20px;
     &:after {
       @include clearfix;
     }
@@ -578,7 +587,7 @@
     text-align: left;
     .wrap{
       background: linear-gradient(to right, $white 0%, $white 33%, rgb(240, 247, 240) 33.01%, $ltgreen 100%);
-      padding: 2em 0;
+      padding: 2em 30px;
     }
     .social-media{
       margin: 1rem 0;

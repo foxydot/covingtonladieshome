@@ -76,6 +76,7 @@
 /* Neutrals */
 /* Default Colors */
 /* Social Colors */
+/* some elements */
 /* # Defaults
 ---------------------------------------------------------------------------------------------------- */
 /* ## Typographical Elements
@@ -86,7 +87,7 @@ html {
 
 /* Chrome fix */
 body {
-  font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Martel", "Times New Roman", sans-serif;
   font-weight: 400;
   font-size: 1em;
   color: #666;
@@ -926,7 +927,8 @@ address {
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-  background-color: #FFF; }
+  background-color: #FFF;
+  border-bottom: 1px solid #CCC; }
 
 .site-header > .wrap {
   padding: 20px 0; }
@@ -1037,7 +1039,8 @@ address {
   text-align: right; }
 
 .page-title-area {
-  background: #FFF; }
+  background: #FFF;
+  border-bottom: 1px solid #CCC; }
   .page-title-area .banner .wrap {
     background-repeat: no-repeat;
     background-size: contain; }
@@ -1174,7 +1177,7 @@ address {
 .genesis-nav-menu {
   font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 1.5em;
   clear: both;
   font-weight: 800;
   line-height: 1;
@@ -1250,6 +1253,7 @@ address {
 --------------------------------------------- */
 .nav-primary {
   padding-top: 5.5em;
+  padding-right: 3em;
   float: right;
   text-transform: uppercase; }
   .nav-primary .menu {
@@ -1642,32 +1646,38 @@ p.entry-meta {
   /* # Defaults
   ---------------------------------------------------------------------------------------------------- */
   body {
-    background: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(50%, #FFF), color-stop(50.1%, #bbdbc3), to(#bbdbc3));
-    background: linear-gradient(to right, #FFF 0%, #FFF 50%, #bbdbc3 50.1%, #bbdbc3 100%); }
+    background: #FFF; }
+    body .site-container {
+      max-width: 1280px;
+      -webkit-box-shadow: 0 0 24px 0 #666;
+      box-shadow: 0 0 24px 0 #666;
+      margin: 0 auto; }
 
   /* # Structure
   ---------------------------------------------------------------------------------------------------- */
   .site-inner {
-    background: none; }
+    background: none;
+    padding: 0; }
     .site-inner .wrap {
       background: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(33%, #FFF), color-stop(33.01%, #f0f7f0), to(#bbdbc3));
-      background: linear-gradient(to right, #FFF 0%, #FFF 33%, #f0f7f0 33.01%, #bbdbc3 100%); }
+      background: linear-gradient(to right, #FFF 0%, #FFF 33%, #f0f7f0 33.01%, #bbdbc3 100%);
+      padding: 0 30px; }
       .site-inner .wrap .content-sidebar-wrap {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
 
-  .gala {
+  .page.gala {
     background: #fff; }
-    .gala .content {
+    .page.gala .content {
       background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
       background-size: cover;
       background-repeat: no-repeat; }
-      .gala .content article {
+      .page.gala .content article {
         padding-top: 0; }
-    .gala .site-inner .wrap {
+    .page.gala .site-inner .wrap {
       background: #fff; }
-    .gala .site-footer .wrap {
+    .page.gala .site-footer .wrap {
       background: #fff; }
 
   .no-green {
@@ -1736,7 +1746,7 @@ p.entry-meta {
     background-color: #FFF; }
 
   .site-header > .wrap {
-    padding: 20px 0; }
+    padding: 20px; }
     .site-header > .wrap:after {
       content: " ";
       display: table;
@@ -2046,7 +2056,7 @@ p.entry-meta {
     .site-footer .wrap {
       background: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(33%, #FFF), color-stop(33.01%, #f0f7f0), to(#bbdbc3));
       background: linear-gradient(to right, #FFF 0%, #FFF 33%, #f0f7f0 33.01%, #bbdbc3 100%);
-      padding: 2em 0; }
+      padding: 2em 30px; }
     .site-footer .social-media {
       margin: 1rem 0;
       float: none;
