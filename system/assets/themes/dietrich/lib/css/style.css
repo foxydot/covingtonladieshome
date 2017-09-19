@@ -332,7 +332,7 @@ input[type="submit"]:focus,
 input[type="submit"]:hover,
 .button:focus,
 .button:hover {
-  background-color: #990000;
+  background-color: #5a9ee4;
   color: #FFF; }
 
 .entry-content .button:focus,
@@ -898,7 +898,7 @@ address {
   .site-inner .gform_wrapper .gform_heading .gform_description {
     font-family: "Martel", "Times New Roman", sans-serif;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #3f829c;
     font-weight: 600; }
   .site-inner .gform_wrapper .gform_body {
@@ -906,13 +906,14 @@ address {
     font-weight: 400;
     font-size: 1em; }
     .site-inner .gform_wrapper .gform_body li.gfield {
-      background: #fff; }
+      background: #eaf3fb; }
       .site-inner .gform_wrapper .gform_body li.gfield label {
         padding: 0 1em;
         font-size: 0.7em;
         font-weight: 400; }
       .site-inner .gform_wrapper .gform_body li.gfield .ginput_container input, .site-inner .gform_wrapper .gform_body li.gfield .ginput_container textarea {
-        border: 0; }
+        border: 0;
+        background: rgba(234, 243, 251, 0); }
       .site-inner .gform_wrapper .gform_body li.gfield.white {
         background: none; }
   .site-inner .gform_wrapper .gform_footer {
@@ -1626,6 +1627,11 @@ p.entry-meta {
 
 .nobr {
   white-space: nowrap; }
+
+.page.become-a-resident main.content ul li {
+  font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em; }
 
 @media only screen and (min-width: 768px) {
   /* Accessible Menu

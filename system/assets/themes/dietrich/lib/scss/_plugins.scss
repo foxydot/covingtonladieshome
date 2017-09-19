@@ -122,7 +122,7 @@
     max-width: 101%;
     .gform_heading {
       .gform_description {
-        @include serif(1.2);
+        @include serif(1);
         color: $blue;
         font-weight: 600;
       }
@@ -130,7 +130,7 @@
     .gform_body {
       @include sansserif();
       li.gfield {
-        background: $input_bkg;
+        background: rgb(234, 243, 251);
         label {
           padding: 0 1em;
           font-size: 0.7em;
@@ -139,6 +139,7 @@
         .ginput_container {
           input, textarea {
             border: 0;
+            background: rgba(234,243,251,0);
           }
         }
         &.white {

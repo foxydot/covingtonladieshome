@@ -67,7 +67,7 @@ $input_bkg: #fff;
 $input_border: $ltgrey;
 $btn_bkg: rgb(134, 184, 235);
 $btn_txt: $white;
-$btn_hvr_bkg: $dkred;
+$btn_hvr_bkg: darken(rgb(134, 184, 235),10%);
 $btn_hvr_txt: $white;
 $btn_dis_bkg: $ltgrey;
 $btn_dis_txt: $medgrey;
