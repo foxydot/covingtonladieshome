@@ -1,13 +1,4 @@
 <?php
-if(!class_exists('WPAlchemy_MetaBox')){
-    include_once (WP_CONTENT_DIR.'/wpalchemy/MetaBox.php');
-}
-
-global $wpalchemy_media_access;
-if(!class_exists('WPAlchemy_MediaAccess')){
-    include_once (WP_CONTENT_DIR.'/wpalchemy/MediaAccess.php');
-}
-$wpalchemy_media_access = new WPAlchemy_MediaAccess();
 
 if (!class_exists('MSDLab_Sidebar_Content_Support')) {
     class MSDLab_Sidebar_Content_Support {
