@@ -38,6 +38,7 @@ class MSDLabCLHCustom
         require_once(plugin_dir_path(__FILE__) . 'lib/inc/event_calendar_widget.php');
         require_once(plugin_dir_path(__FILE__) . 'lib/inc/sidebar_content_support.php');
         require_once(plugin_dir_path(__FILE__) . 'lib/inc/msd_team_cpt.php');
+        require_once(plugin_dir_path(__FILE__) . 'lib/inc/msd_resource_cpt.php');
 
         add_action('widgets_init', @array($this,'widgets_init'));
         if(class_exists('MSDLab_Sidebar_Content_Support')){
@@ -45,6 +46,9 @@ class MSDLabCLHCustom
         }
         if(class_exists('MSDTeamCPT')){
             $this->team_class = new MSDTeamCPT();
+        }
+        if(class_exists('MSDResourceCPT')){
+            $this->media_class = new MSDResourceCPT();
         }
     }
 
