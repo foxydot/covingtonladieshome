@@ -44,9 +44,7 @@ class MSDLab_Shortcodes
                 $url = $parts[0].':'.antispambot($parts[1]);
             }
         }
-        $ret = '<div class="button-wrapper">
-<a class="button" href="'.$url.'" target="'.$target.'">'.remove_wpautop($content).'</a>
-</div>';
+        $ret = '<a class="button" href="'.$url.'" target="'.$target.'">'.remove_wpautop($content).'</a>';
         return $ret;
     }
 
