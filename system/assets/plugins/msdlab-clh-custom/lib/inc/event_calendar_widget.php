@@ -228,7 +228,8 @@ function msdlab_get_events_calendar( $initial = true, $echo = true ) {
 	<tr>';
 
         $calendar_output .= "\n\t\t".'<td colspan="3" id="prev"><a href="' . tribe_get_previous_month_link() . '">&laquo; ' .
-            $wp_locale->get_month_abbrev( $wp_locale->get_month( $previous['month'] ) ) .
+            //$wp_locale->get_month_abbrev( $wp_locale->get_month( $previous['month'] ) ) .
+            'prev' .
             '</a></td>';
 
 
@@ -236,7 +237,8 @@ function msdlab_get_events_calendar( $initial = true, $echo = true ) {
 
 
         $calendar_output .= "\n\t\t".'<td colspan="3" id="next"><a href="' . tribe_get_next_month_link() . '">' .
-            $wp_locale->get_month_abbrev( $wp_locale->get_month( $next['month'] ) ) .
+            //$wp_locale->get_month_abbrev( $wp_locale->get_month( $next['month'] ) ) .
+            'next' .
             ' &raquo;</a></td>';
 
 

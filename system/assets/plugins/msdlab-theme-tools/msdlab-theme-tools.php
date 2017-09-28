@@ -78,6 +78,10 @@ if (!class_exists('MSDLabThemeTools')) {
             //get sub-packages
             require_once(plugin_dir_path(__FILE__).'/lib/inc/devtool.php');
             require_once(plugin_dir_path(__FILE__).'/lib/inc/theme_tweaks.php');
+            require_once(plugin_dir_path(__FILE__).'/lib/inc/shortcodes.php');
+            if(class_exists('MSDLab_Shortcodes')){
+                new MSDLab_Shortcodes(array());
+            }
             if($this->genesis_test()) {
                 require_once(plugin_dir_path(__FILE__) . '/lib/inc/genesis_bootstrap_hooks.php');
                 require_once(plugin_dir_path(__FILE__).'/lib/inc/genesis_tweaks.php');
