@@ -31,7 +31,10 @@
   font-weight: 600;
   text-align: center; }
   .entry-content .col-md-4 a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #3f829c; }
+    .entry-content .col-md-4 a:hover {
+      color: #b1536f; }
 
 @media only screen and (min-width: 1024px) {
   .page-title-area .banner .wrap .gradient .bannertext {

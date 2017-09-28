@@ -1377,6 +1377,10 @@ address {
   margin-bottom: 40px;
   padding: 2vw; }
 
+.entry-content span.intro {
+  font-weight: 900;
+  text-transform: uppercase; }
+
 .entry-content ol,
 .entry-content ul {
   margin-bottom: 28px;
@@ -1499,7 +1503,8 @@ p.entry-meta {
 
 /* # Sidebars
 ---------------------------------------------------------------------------------------------------- */
-.sidebar .widget {
+.sidebar .widget,
+.sidebar .sidebarcontent {
   padding: 5vw 0; }
 
 /* # Footer Widgets
@@ -1554,6 +1559,9 @@ p.entry-meta {
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
+  font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.8em;
   font-size: 2.5vw;
   line-height: 1;
   text-align: center; }
@@ -1891,8 +1899,11 @@ p.entry-meta {
       .page-title-area .banner .texturize .gradient {
         min-height: 400px; }
     .page-title-area .history-banner h1.entry-title {
-      text-transform: uppercase;
+      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+      font-weight: 400;
       font-size: 1em;
+      font-weight: 700;
+      text-transform: uppercase;
       position: relative;
       top: 250px; }
     .page-title-area .history-banner h2 {
@@ -1913,8 +1924,11 @@ p.entry-meta {
       .page-title-area .media-banner .wrap .gradient {
         background: none; }
     .page-title-area .building-banner h1.entry-title {
-      text-transform: uppercase;
+      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+      font-weight: 400;
       font-size: 1em;
+      font-weight: 700;
+      text-transform: uppercase;
       position: relative;
       top: 250px; }
     .page-title-area .building-banner h2 {
@@ -1922,8 +1936,11 @@ p.entry-meta {
       position: relative;
       top: 250px; }
     .page-title-area .gala-banner h1.entry-title {
-      text-transform: uppercase;
+      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+      font-weight: 400;
       font-size: 1em;
+      font-weight: 700;
+      text-transform: uppercase;
       position: relative;
       top: 250px; }
     .page-title-area .gala-banner h2 {
@@ -1931,8 +1948,11 @@ p.entry-meta {
       position: relative;
       top: 250px; }
     .page-title-area .donate-banner h1.entry-title {
-      text-transform: uppercase;
+      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+      font-weight: 400;
       font-size: 1em;
+      font-weight: 700;
+      text-transform: uppercase;
       position: relative;
       top: 250px; }
     .page-title-area .donate-banner h2 {
@@ -1999,7 +2019,8 @@ p.entry-meta {
 
   /* # Sidebars
   ---------------------------------------------------------------------------------------------------- */
-  .sidebar .widget {
+  .sidebar .widget,
+  .sidebar .sidebarcontent {
     padding: 2em 0; }
 
   /* # Footer Widgets

@@ -21,7 +21,7 @@ if (!class_exists('MSDResourceCPT')) {
             add_action( 'init', array(&$this,'register_taxonomies') );
             add_action( 'init', array(&$this,'register_cpt') );
             add_action( 'init', array(&$this,'register_metaboxes') );
-            add_action('admin_head', array(&$this,'plugin_header'));
+            //add_action('admin_head', array(&$this,'plugin_header'));
             add_action('admin_print_scripts', array(&$this,'add_admin_scripts') );
             add_action('admin_print_styles', array(&$this,'add_admin_styles') );
             //add_action('admin_footer',array(&$this,'info_footer_hook') );

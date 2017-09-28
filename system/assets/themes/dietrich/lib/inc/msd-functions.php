@@ -222,3 +222,19 @@ function remove_empty_p( $content ){
 
     return preg_replace('#<p>(\s|&nbsp;)*+(<br\s*/*>)*(\s|&nbsp;)*</p>#i', '', $content);
 }
+
+add_shortcode('mailto','msdlab_mailto_function');
+function msdlab_mailto_function($atts, $content){
+    extract( shortcode_atts( array(
+        'email' => '',
+    ), $atts ) );
+    $content = trim($content);
+    if($email == '' && preg_match('|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}|i', $content, $matches)){
+        $email = $matches[0];
+    }
+    $email = antispambot($email);
+    if(count($content)<1){
+        $content = $email;
+    }
+    return '<a href="mailto:'.$email.'">'.$content.'</a>';
+}

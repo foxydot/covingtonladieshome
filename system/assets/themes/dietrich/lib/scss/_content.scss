@@ -9,6 +9,13 @@
   padding: 2vw;
 }
 
+.entry-content{
+  span.intro{
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+
 .entry-content ol,
 .entry-content ul {
   margin-bottom: 28px;
@@ -164,7 +171,8 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-  .widget {
+  .widget,
+  .sidebarcontent {
     padding: 5vw 0;
   }
 }

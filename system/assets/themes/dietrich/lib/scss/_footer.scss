@@ -71,6 +71,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
+  @include sansserif(0.8);
   font-size: 2.5vw;
   line-height: 1;
   text-align: center;
