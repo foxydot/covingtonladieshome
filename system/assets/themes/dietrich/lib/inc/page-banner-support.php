@@ -63,33 +63,71 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
         }
 
         function msdlab_do_page_banner(){
-            if(is_page()){
+            if(is_page()) {
                 global $post, $page_banner_metabox;
                 $page_banner_metabox->the_meta();
                 $bannerbool = $page_banner_metabox->get_the_value('bannerbool');
-                if($bannerbool != 'true'){
+                if ($bannerbool != 'true') {
                     return;
                 }
                 $bannerclass = $page_banner_metabox->get_the_value('bannerclass');
                 $banneralign = $page_banner_metabox->get_the_value('banneralign');
                 $bannerimage = $page_banner_metabox->get_the_value('bannerimage');
-                $bannercontent = apply_filters('the_content',$page_banner_metabox->get_the_value('bannercontent'));
-                remove_action('genesis_entry_header','genesis_do_post_title');
-                global $post;
-                $background = strlen($bannerimage)>0?' style="background-image:url('.$bannerimage.')"':'';
-                print '<div class="banner clearfix '.$banneralign.' '.$bannerclass.'">';
-                print '<div class="wrap"'.$background.'>';
+                $bannercontent = apply_filters('the_content', $page_banner_metabox->get_the_value('bannercontent'));
+                remove_action('genesis_entry_header', 'genesis_do_post_title');
+                $background = strlen($bannerimage) > 0 ? ' style="background-image:url(' . $bannerimage . ')"' : '';
+                print '<div class="banner clearfix ' . $banneralign . ' ' . $bannerclass . '">';
+                print '<div class="wrap"' . $background . '>';
                 print '<div class="gradient">';
                 print '<div class="bannertext">';
                 print genesis_do_post_title();
-                print '<div class="bannercontent">'.$bannercontent.'</div>';
+                print '<div class="bannercontent">' . $bannercontent . '</div>';
                 print '</div>';
                 print '</div>';
                 print '</div>';
                 print '</div>';
+            }elseif(get_post_type() == 'post'){
+                global $post, $page_banner_metabox;
+                $blog_id = get_option( 'page_for_posts' );
+                $page_banner_metabox->the_meta($blog_id);
+                $bannerbool = $page_banner_metabox->get_the_value('bannerbool');
+                if ($bannerbool != 'true') {
+                    return;
+                }
+                $bannerclass = $page_banner_metabox->get_the_value('bannerclass');
+                $banneralign = $page_banner_metabox->get_the_value('banneralign');
+                $bannerimage = $page_banner_metabox->get_the_value('bannerimage');
+                $bannercontent = apply_filters('the_content', $page_banner_metabox->get_the_value('bannercontent'));
+                remove_action('genesis_before_loop','genesis_do_cpt_archive_title_description');
+                remove_action('genesis_before_loop','genesis_do_date_archive_title');
+                remove_action('genesis_before_loop','genesis_do_blog_template_heading');
+                remove_action('genesis_before_loop','genesis_do_posts_page_heading');
+                remove_action('genesis_before_loop','genesis_do_taxonomy_title_description',15);
+                remove_action('genesis_before_loop','genesis_do_author_title_description',15);
+                remove_action('genesis_before_loop','genesis_do_author_box_archive',15);
+                add_filter('genesis_post_title_text',array(&$this,'msdlab_plog_page_title'));
+                $background = strlen($bannerimage) > 0 ? ' style="background-image:url(' . $bannerimage . ')"' : '';
+                print '<div class="banner clearfix ' . $banneralign . ' ' . $bannerclass . '">';
+                print '<div class="wrap"' . $background . '>';
+                print '<div class="gradient">';
+                print '<div class="bannertext">';
+                print genesis_do_post_title();
+                print '<div class="bannercontent">' . $bannercontent . '</div>';
+                print '</div>';
+                print '</div>';
+                print '</div>';
+                print '</div>';
+                remove_filter('genesis_post_title_text',array(&$this,'msdlab_plog_page_title'));
+
+
             } else {
                 genesis_do_post_title();
             }
+        }
+
+        function msdlab_plog_page_title($title){
+            $blog_id = get_option( 'page_for_posts' );
+            return get_the_title($blog_id);
         }
 
     } //End Class

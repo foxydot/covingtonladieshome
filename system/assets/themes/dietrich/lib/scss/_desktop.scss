@@ -324,7 +324,7 @@
         }
       }
     }
-    .history-banner{
+    .history-banner,.building-banner ,.gala-banner, .donate-banner{
       h1.entry-title {
         @include sansserif(1);
         font-weight: 700;
@@ -363,48 +363,6 @@
         }  
       } 
     }
-    .building-banner {
-      h1.entry-title {
-        @include sansserif(1);
-        font-weight: 700;
-        text-transform: uppercase;
-        position: relative;
-        top: 250px;
-      }
-      h2 {
-          font-size: 2em;
-          position: relative;
-          top: 250px;
-      }
-    }
-    .gala-banner{
-      h1.entry-title {
-        @include sansserif(1);
-        font-weight: 700;
-        text-transform: uppercase;
-        position: relative;
-        top: 250px;
-      }
-      h2 {
-          font-size: 2em;
-          position: relative;
-          top: 250px;
-      }
-    }
-    .donate-banner {
-      h1.entry-title {
-        @include sansserif(1);
-        font-weight: 700;
-        text-transform: uppercase;
-        position: relative;
-        top: 250px;
-      }
-      h2 {
-          font-size: 2em;
-          position: relative;
-          top: 250px;
-      }
-    }
     .privacy-banner {
       h1.entry-title {
         font-size: 1.3em;
@@ -417,7 +375,7 @@
         }
       }  
     }
-    .contact-banner {
+    .contact-banner, .short-banner {
       h1.entry-title {
         font-size: 2em;
         width:43%;

@@ -24,6 +24,6 @@ if(!function_exists('my_msdlab_trace_actions')) {
     function my_msdlab_trace_actions()
     {
         global $wp_filter;
-        ts_var($wp_filter['genesis_footer']);
+        ts_var($wp_filter['genesis_before_loop']);
     }
 }

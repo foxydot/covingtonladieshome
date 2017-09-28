@@ -154,6 +154,20 @@ function msdlab_add_extra_theme_sidebars(){
     ));
 }
 
+function msdlab_select_sidebars(){
+    global $post;
+    if((is_home() || is_archive() || is_single()) && $post->post_type == "post" ){
+        remove_action('genesis_sidebar', 'genesis_do_sidebar');
+        add_action('genesis_sidebar', 'msdlab_do_blog_sidebar');
+    }
+}
+
+function msdlab_do_blog_sidebar(){
+    if(is_active_sidebar('blog')){
+        dynamic_sidebar('blog');
+    }
+}
+
 /**
  * Customize Breadcrumb output
  */

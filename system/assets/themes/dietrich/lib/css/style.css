@@ -1907,7 +1907,7 @@ p.entry-meta {
       background-position: center center; }
       .page-title-area .banner .texturize .gradient {
         min-height: 400px; }
-    .page-title-area .history-banner h1.entry-title {
+    .page-title-area .history-banner h1.entry-title, .page-title-area .building-banner h1.entry-title, .page-title-area .gala-banner h1.entry-title, .page-title-area .donate-banner h1.entry-title {
       font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
       font-weight: 400;
       font-size: 1em;
@@ -1915,7 +1915,7 @@ p.entry-meta {
       text-transform: uppercase;
       position: relative;
       top: 250px; }
-    .page-title-area .history-banner h2 {
+    .page-title-area .history-banner h2, .page-title-area .building-banner h2, .page-title-area .gala-banner h2, .page-title-area .donate-banner h2 {
       font-size: 2em;
       position: relative;
       top: 250px; }
@@ -1932,42 +1932,6 @@ p.entry-meta {
       max-height: 120px; }
       .page-title-area .media-banner .wrap .gradient {
         background: none; }
-    .page-title-area .building-banner h1.entry-title {
-      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
-      font-weight: 400;
-      font-size: 1em;
-      font-weight: 700;
-      text-transform: uppercase;
-      position: relative;
-      top: 250px; }
-    .page-title-area .building-banner h2 {
-      font-size: 2em;
-      position: relative;
-      top: 250px; }
-    .page-title-area .gala-banner h1.entry-title {
-      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
-      font-weight: 400;
-      font-size: 1em;
-      font-weight: 700;
-      text-transform: uppercase;
-      position: relative;
-      top: 250px; }
-    .page-title-area .gala-banner h2 {
-      font-size: 2em;
-      position: relative;
-      top: 250px; }
-    .page-title-area .donate-banner h1.entry-title {
-      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
-      font-weight: 400;
-      font-size: 1em;
-      font-weight: 700;
-      text-transform: uppercase;
-      position: relative;
-      top: 250px; }
-    .page-title-area .donate-banner h2 {
-      font-size: 2em;
-      position: relative;
-      top: 250px; }
     .page-title-area .privacy-banner h1.entry-title {
       font-size: 1.3em;
       padding-top: 20px; }
@@ -1975,7 +1939,7 @@ p.entry-meta {
       max-height: 120px; }
       .page-title-area .privacy-banner .wrap .gradient {
         background: none; }
-    .page-title-area .contact-banner h1.entry-title {
+    .page-title-area .contact-banner h1.entry-title, .page-title-area .short-banner h1.entry-title {
       font-size: 2em;
       width: 43%;
       position: relative;
@@ -1983,9 +1947,9 @@ p.entry-meta {
       background-color: rgba(255, 255, 255, 0.9);
       -webkit-box-shadow: 67px 12px 86px 25px white;
       box-shadow: 67px 12px 86px 25px white; }
-    .page-title-area .contact-banner .wrap {
+    .page-title-area .contact-banner .wrap, .page-title-area .short-banner .wrap {
       max-height: 120px; }
-      .page-title-area .contact-banner .wrap .gradient {
+      .page-title-area .contact-banner .wrap .gradient, .page-title-area .short-banner .wrap .gradient {
         background: none; }
     .page-title-area .resident-banner h1.entry-title {
       font-size: 2em;
