@@ -901,6 +901,8 @@ address {
     font-size: 1em;
     color: #3f829c;
     font-weight: 600; }
+    .site-inner .gform_wrapper .gform_heading .gform_description a {
+      color: #3f829c; }
   .site-inner .gform_wrapper .gform_body {
     font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
     font-weight: 400;
