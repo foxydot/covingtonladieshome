@@ -133,7 +133,8 @@
     .gform_body {
       @include sansserif();
       li.gfield {
-        background: rgb(234, 243, 251);
+        background: $white;
+        margin-bottom: 0.5em;
         label {
           padding: 0 1em;
           font-size: 0.7em;
@@ -142,7 +143,7 @@
         .ginput_container {
           input, textarea {
             border: 0;
-            background: rgba(234,243,251,0);
+            background: $white;
           }
         }
         &.white {
@@ -156,6 +157,23 @@
       input[type=submit] {
         width: 50%;
         display: block;
+      }
+    }
+  }
+  .sidebar{
+    .gform_wrapper {
+      .gform_body {
+        li.gfield {
+          background: rgb(234, 243, 251);
+          .ginput_container {
+            input, textarea {
+              background: rgba(234,243,251,0);
+            }
+          }
+          &.white {
+            background: none;
+          }
+        }
       }
     }
   }
