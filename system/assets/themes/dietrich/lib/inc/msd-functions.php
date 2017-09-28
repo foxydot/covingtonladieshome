@@ -233,7 +233,7 @@ function msdlab_mailto_function($atts, $content){
         $email = $matches[0];
     }
     $email = antispambot($email);
-    if(count($content)<1){
+    if(strlen($content)<1){
         $content = $email;
     }
     return '<a href="mailto:'.$email.'">'.$content.'</a>';
