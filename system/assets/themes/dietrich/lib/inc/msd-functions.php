@@ -238,3 +238,9 @@ function msdlab_mailto_function($atts, $content){
     }
     return '<a href="mailto:'.$email.'">'.$content.'</a>';
 }
+
+add_filter( 'gform_pre_render', 'msdlab_filter_description' );
+function msdlab_filter_description($form){
+    $form['description'] = do_shortcode($form['description']);
+        return $form;
+}
