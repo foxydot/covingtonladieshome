@@ -36,7 +36,8 @@ class MSDLab_Shortcodes
     function msdlab_button_function($atts, $content = null){
         extract( shortcode_atts( array(
             'url' => null,
-            'target' => '_self'
+            'target' => '_self',
+            'class' => null
         ), $atts ) );
         if(strstr($url,'mailto:',0)){
             $parts = explode(':',$url);
@@ -44,7 +45,7 @@ class MSDLab_Shortcodes
                 $url = $parts[0].':'.antispambot($parts[1]);
             }
         }
-        $ret = '<a class="button" href="'.$url.'" target="'.$target.'">'.remove_wpautop($content).'</a>';
+        $ret = '<a class="button ' . $class . '" href="' . $url . '" target="' . $target . '">'.remove_wpautop($content).'</a>';
         return $ret;
     }
 

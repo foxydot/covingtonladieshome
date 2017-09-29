@@ -1650,6 +1650,11 @@ p.entry-meta {
   font-weight: 400;
   font-size: 1.2em; }
 
+.sidebar .sidebarcontent.bullets ul li {
+  list-style-type: disc;
+  margin-left: 2em;
+  margin-bottom: 0.5em; }
+
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
   --------------------------------------------- */

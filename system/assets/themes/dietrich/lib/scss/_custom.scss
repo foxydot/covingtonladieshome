@@ -13,3 +13,14 @@
   @include sansserif(1.2);
 }
 
+.sidebar{
+  .sidebarcontent.bullets{
+    ul{
+      li{
+        list-style-type: disc;
+        margin-left: 2em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
