@@ -23,4 +23,7 @@
       }
     }
   }
+  .sidebarcontent.sanserif{
+    @include sansserif(1);
+  }
 }

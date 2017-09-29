@@ -92,6 +92,11 @@ if(class_exists('MSDLab_Genesis_Tweaks')){
     $subtitle_support = new MSDLab_Subtitle_Support($options);
 }*/
 
+if(class_exists('MSDLabTextSizer')){
+    remove_action('genesis_before_loop',array($msdlab_text_sizer,'display_text_resizer'));
+    add_action('genesis_before_content_sidebar_wrap',array($msdlab_text_sizer,'display_text_resizer'));
+}
+
 
 /*** HEADER ***/
 add_action('wp_head','msdlab_maybe_wrap_inner');

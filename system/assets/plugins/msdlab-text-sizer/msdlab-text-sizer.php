@@ -43,11 +43,12 @@ class MSDLabTextSizer
         </script>
         <style>
         .text-sizer{
-            margin: 1em 0 0 0;
+            margin: 0;
             display: block;
             z-index: 90;
             color: rgba(0,0,0,0.4);
             text-align: right;
+            padding: 1em;
          }
         .text-sizer div{
             border: 1px solid rgba(0,0,0,0.2);
@@ -95,7 +96,7 @@ class MSDLabTextSizer
     }
 }
 //instantiate
-new MSDLabTextSizer();
+$msdlab_text_sizer = new MSDLabTextSizer();
 
 /*
  * //add element to page

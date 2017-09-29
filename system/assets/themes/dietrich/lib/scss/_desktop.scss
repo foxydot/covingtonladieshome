@@ -29,18 +29,24 @@
   }
   
   .page.gala {
-    .content{
-      background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      article {
-        padding-top:0;
-      }
-    }
-    background:#fff;
-    .site-inner {
+    background:$white;
+    .site-inner{
       .wrap {
-        background:#fff;
+        background-color: $white;
+        background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
+        background-position: top right;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        .text-sizer{
+          position: absolute;
+          right: 2em;
+        }
+        .content-sidebar-wrap{
+          clear: right;
+        }
+        .sidebar{
+          background-color: $white;
+        }
       }
     }
     .site-footer {

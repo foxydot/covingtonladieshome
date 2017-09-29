@@ -1654,6 +1654,10 @@ p.entry-meta {
   list-style-type: disc;
   margin-left: 2em;
   margin-bottom: 0.5em; }
+.sidebar .sidebarcontent.sanserif {
+  font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1em; }
 
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
@@ -1696,15 +1700,20 @@ p.entry-meta {
         display: flex; }
 
   .page.gala {
-    background: #fff; }
-    .page.gala .content {
-      background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
-      background-size: cover;
-      background-repeat: no-repeat; }
-      .page.gala .content article {
-        padding-top: 0; }
+    background: #FFF; }
     .page.gala .site-inner .wrap {
-      background: #fff; }
+      background-color: #FFF;
+      background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
+      background-position: top right;
+      background-size: auto 100%;
+      background-repeat: no-repeat; }
+      .page.gala .site-inner .wrap .text-sizer {
+        position: absolute;
+        right: 2em; }
+      .page.gala .site-inner .wrap .content-sidebar-wrap {
+        clear: right; }
+      .page.gala .site-inner .wrap .sidebar {
+        background-color: #FFF; }
     .page.gala .site-footer .wrap {
       background: #fff; }
 
