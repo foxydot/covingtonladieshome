@@ -27,7 +27,8 @@ if (!class_exists('MSDResourceCPT')) {
             //add_action('admin_footer',array(&$this,'info_footer_hook') );
             // important: note the priority of 99, the js needs to be placed after tinymce loads
             add_action('admin_print_footer_scripts',array(&$this,'print_footer_scripts'),99);
-            add_action('template_redirect', array(&$this,'my_theme_redirect'));
+            //add_action('template_redirect', array(&$this,'my_theme_redirect'));
+            add_action('wp_head',array(&$this,'cpt_display'));
             add_action('admin_head', array(&$this,'codex_custom_help_tab'));
 
             //Filters
@@ -104,7 +105,7 @@ if (!class_exists('MSDResourceCPT')) {
                 'show_in_nav_menus' => true,
                 'publicly_queryable' => true,
                 'exclude_from_search' => true,
-                'has_archive' => true,
+                'has_archive' => false,
                 'query_var' => true,
                 'can_export' => true,
                 'rewrite' => array('slug'=>'resource','with_front'=>false),
@@ -329,16 +330,87 @@ if (!class_exists('MSDResourceCPT')) {
             wp_reset_query();
         }
 
+        function print_shortcode_handler(){
+            print $this->shortcode_handler(array());
+        }
+
         function cpt_display(){
             global $post;
             if(is_cpt($this->cpt)) {
+                add_action('msdlab_title_area',array(&$this,'do_page_banner'),4);
                 if (is_single()){
                     //display content here
-
+                    add_action('genesis_entry_content',array(&$this,'single_content'));
                 } else {
                     //display for aggregate here
+                    remove_all_actions('genesis_loop');
+                    add_action('genesis_loop', array(&$this,'print_shortcode_handler'));
                 }
             }
+        }
+
+        function single_content($content){
+            global $resource_info;
+            $resource_info->the_meta();
+            $title = $resource_info->get_the_value('title');
+            if($title == ''){
+                $title = get_the_title();
+            }
+            $pubdate = $resource_info->get_the_value('pubdate');
+            if($pubdate == ''){
+                $pubdate = get_the_date();
+            }
+            $file = $resource_info->get_the_value('file');
+            $attachment_id = $this->get_attachment_id_from_src($file);
+            $filesize = $this->formatSize(filesize( get_attached_file( $attachment_id ) ));
+            $dllink = '<a href="'.$file.'"><i class="fa fa-download"> <span>Download File</span></i></a>';
+            $content .= 'File size: '.$filesize.'</br>';
+            $content .= $dllink;
+            print $content;
+        }
+
+        function do_page_banner(){
+            global $post;
+            global $page_banner_metabox;
+            if(is_cpt($this->cpt)) {
+                remove_action('msdlab_title_area',array('MSDLab_Page_Banner_Support','msdlab_do_page_banner'));
+                //get the header from "download-media"
+                $root = get_page_by_path('/about/download-media');
+                $page_banner_metabox->the_meta($root->ID);
+                $bannerbool = $page_banner_metabox->get_the_value('bannerbool');
+                if ($bannerbool != 'true') {
+                    return;
+                }
+                $bannerclass = $page_banner_metabox->get_the_value('bannerclass');
+                $banneralign = $page_banner_metabox->get_the_value('banneralign');
+                $bannerimage = $page_banner_metabox->get_the_value('bannerimage');
+                $bannercontent = apply_filters('the_content', $page_banner_metabox->get_the_value('bannercontent'));
+                remove_action('genesis_before_loop','genesis_do_cpt_archive_title_description');
+                remove_action('genesis_before_loop','genesis_do_date_archive_title');
+                remove_action('genesis_before_loop','genesis_do_blog_template_heading');
+                remove_action('genesis_before_loop','genesis_do_posts_page_heading');
+                remove_action('genesis_before_loop','genesis_do_taxonomy_title_description',15);
+                remove_action('genesis_before_loop','genesis_do_author_title_description',15);
+                remove_action('genesis_before_loop','genesis_do_author_box_archive',15);
+                add_filter('genesis_post_title_text',array(&$this,'cpt_page_title'));
+                $background = strlen($bannerimage) > 0 ? ' style="background-image:url(' . $bannerimage . ')"' : '';
+                print '<div class="banner clearfix ' . $banneralign . ' ' . $bannerclass . '">';
+                print '<div class="wrap"' . $background . '>';
+                print '<div class="gradient">';
+                print '<div class="bannertext">';
+                print genesis_do_post_title();
+                print '<div class="bannercontent">' . $bannercontent . '</div>';
+                print '</div>';
+                print '</div>';
+                print '</div>';
+                print '</div>';
+                remove_filter('genesis_post_title_text',array(&$this,'cpt_page_title'));
+            }
+        }
+
+        function cpt_page_title($title){
+            $root = get_page_by_path('/about/download-media');
+            return get_the_title($root->ID);
         }
 
         function get_attachment_id_from_src ($image_src) {

@@ -105,7 +105,7 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 remove_action('genesis_before_loop','genesis_do_taxonomy_title_description',15);
                 remove_action('genesis_before_loop','genesis_do_author_title_description',15);
                 remove_action('genesis_before_loop','genesis_do_author_box_archive',15);
-                add_filter('genesis_post_title_text',array(&$this,'msdlab_plog_page_title'));
+                add_filter('genesis_post_title_text',array(&$this,'msdlab_blog_page_title'));
                 $background = strlen($bannerimage) > 0 ? ' style="background-image:url(' . $bannerimage . ')"' : '';
                 print '<div class="banner clearfix ' . $banneralign . ' ' . $bannerclass . '">';
                 print '<div class="wrap"' . $background . '>';
@@ -117,15 +117,13 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 print '</div>';
                 print '</div>';
                 print '</div>';
-                remove_filter('genesis_post_title_text',array(&$this,'msdlab_plog_page_title'));
-
-
+                remove_filter('genesis_post_title_text',array(&$this,'msdlab_blog_page_title'));
             } else {
-                genesis_do_post_title();
+                //genesis_do_post_title();
             }
         }
 
-        function msdlab_plog_page_title($title){
+        function msdlab_blog_page_title($title){
             $blog_id = get_option( 'page_for_posts' );
             return get_the_title($blog_id);
         }
