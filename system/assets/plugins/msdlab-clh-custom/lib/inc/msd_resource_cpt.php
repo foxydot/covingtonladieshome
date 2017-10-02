@@ -33,6 +33,8 @@ if (!class_exists('MSDResourceCPT')) {
             //Filters
             add_filter( 'pre_get_posts', array(&$this,'custom_query') );
             //add_filter( 'enter_title_here', array(&$this,'change_default_title') );
+
+            add_shortcode('press',array(&$this,'shortcode_handler'));
         }
 
 
@@ -279,15 +281,80 @@ if (!class_exists('MSDResourceCPT')) {
             }
         }
 
+        function shortcode_handler($atts){
+            extract( shortcode_atts( array(
+                'type' => 'grid',
+            ), $atts ) );
+            $args = array(
+                'post_type' => $this->cpt,
+                'posts_per_page' => -1,
+            );
+            $cpt_query = new WP_Query($args);
+            $grid = '';
+            if($cpt_query->have_posts()){
+                global $resource_info;
+                while($cpt_query->have_posts()){
+                    $cpt_query->the_post();
+                    $resource_info->the_meta();
+                    $title = $resource_info->get_the_value('title');
+                    if($title == ''){
+                        $title = get_the_title();
+                    }
+                    $pubdate = $resource_info->get_the_value('pubdate');
+                    if($pubdate == ''){
+                        $pubdate = get_the_date();
+                    }
+                    $file = $resource_info->get_the_value('file');
+                    $attachment_id = $this->get_attachment_id_from_src($file);
+                    $filesize = $this->formatSize(filesize( get_attached_file( $attachment_id ) ));
+                    $dllink = '<a href="'.$file.'"><i class="fa fa-download"><span class="screen-reader-text">Download</span></i></a>';
+                    $grid .= '<tr>
+<td>'.$title.'</td>
+<td>'.get_the_content().'</td>
+<td>'.$pubdate.'</td>
+<td>'.$filesize.'</td>
+<td>'.$dllink.'</td>
+</tr>';
+                }
+                $header_row = '<tr>
+<th>Title</th>
+<th>Description</th>
+<th>Published</th>
+<th>File Size</th>
+<th></th>
+</tr>';
+                return '<table>'.$header_row.$grid.'</table>';
+            }
+
+            wp_reset_query();
+        }
+
         function cpt_display(){
             global $post;
             if(is_cpt($this->cpt)) {
                 if (is_single()){
                     //display content here
+
                 } else {
                     //display for aggregate here
                 }
             }
         }
+
+        function get_attachment_id_from_src ($image_src) {
+
+            global $wpdb;
+            $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$image_src'";
+            $id = $wpdb->get_var($query);
+            return $id;
+
+        }
+
+        function formatSize($bytes){
+            $s = array('b', 'Kb', 'Mb', 'Gb');
+            $e = floor(log($bytes)/log(1024));
+            return sprintf('%.2f '.$s[$e], ($bytes/pow(1024, floor($e))));
+        }
+
     } //End Class
 } //End if class exists statement
