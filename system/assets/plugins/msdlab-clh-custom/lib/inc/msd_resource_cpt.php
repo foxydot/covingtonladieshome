@@ -305,24 +305,23 @@ if (!class_exists('MSDResourceCPT')) {
                     if($pubdate == ''){
                         $pubdate = get_the_date();
                     }
+                    $pubdate = date('M d',strtotime($pubdate));
                     $file = $resource_info->get_the_value('file');
                     $attachment_id = $this->get_attachment_id_from_src($file);
                     $filesize = $this->formatSize(filesize( get_attached_file( $attachment_id ) ));
                     $dllink = '<a href="'.$file.'"><i class="fa fa-download"><span class="screen-reader-text">Download</span></i></a>';
                     $grid .= '<tr>
-<td>'.$title.'</td>
-<td>'.get_the_content().'</td>
 <td>'.$pubdate.'</td>
+<td><a href="'.$file.'">'.$title.'</a><br />'.get_the_content().'</td>
 <td>'.$filesize.'</td>
 <td>'.$dllink.'</td>
 </tr>';
                 }
                 $header_row = '<tr>
-<th>Title</th>
-<th>Description</th>
 <th>Published</th>
+<th>Description</th>
 <th>File Size</th>
-<th></th>
+<th><i class="fa fa-download"><span class="screen-reader-text">Download</span></i></th>
 </tr>';
                 return '<table>'.$header_row.$grid.'</table>';
             }
@@ -425,7 +424,7 @@ if (!class_exists('MSDResourceCPT')) {
         function formatSize($bytes){
             $s = array('b', 'Kb', 'Mb', 'Gb');
             $e = floor(log($bytes)/log(1024));
-            return sprintf('%.2f '.$s[$e], ($bytes/pow(1024, floor($e))));
+            return sprintf('%.0f '.$s[$e], ($bytes/pow(1024, floor($e))));
         }
 
     } //End Class
