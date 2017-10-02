@@ -173,13 +173,10 @@ add_action('after_404','msdlab_sitemap');
 /**
  * Add new image sizes
  */
-add_image_size('tiny-post-thumb', 45, 45, TRUE);
-add_image_size('nav-post-thumb', 540, 300, true);
 add_image_size('headshot-lg', 330, 330, array('center','top'));
 add_image_size('headshot-md', 220, 220, array('center','top'));
 add_image_size('headshot-sm', 115, 115, TRUE);
-add_image_size('mini-thumbnail', 90, 90, TRUE);
-add_image_size('medlg', 500, 500, FALSE);
+add_image_size('medlg', 400, 300, array('center','top'));
 add_image_size('facebook', 200, 200, TRUE);
 add_image_size('linkedin', 180, 110, TRUE);
 
