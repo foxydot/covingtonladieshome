@@ -266,13 +266,14 @@ figure {
   clear: left; }
 
 .gallery img {
-  border: 1px solid #CCC;
+  border: 0px solid #CCC;
   height: auto;
-  padding: 4px; }
+  padding: 1em; }
 
 .gallery img:focus,
 .gallery img:hover {
-  border: 1px solid #CCC; }
+  border: 0px solid #CCC;
+  background: rgba(187, 219, 195, 0.4); }
 
 /* ## Forms
 --------------------------------------------- */
