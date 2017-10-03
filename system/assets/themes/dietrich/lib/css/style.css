@@ -1065,7 +1065,8 @@ address {
   .page-title-area .banner.imageleft .wrap {
     background-position: center left; }
     .page-title-area .banner.imageleft .wrap .bannertext {
-      float: right; }
+      float: right;
+      text-align: right; }
   .page-title-area .banner.imageright .wrap {
     background-position: center right; }
     .page-title-area .banner.imageright .wrap .bannertext {
