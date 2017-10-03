@@ -480,3 +480,14 @@ if(!function_exists('msd_insert_custom_image_sizes')){
     }
 }
 add_filter( 'image_size_names_choose', 'msd_insert_custom_image_sizes' );
+
+add_action( 'genesis_before_loop', 'sk_excerpts_search_page' );
+function sk_excerpts_search_page() {
+    if ( is_search() ) {
+        add_filter( 'genesis_pre_get_option_content_archive', 'sk_show_excerpts' );
+    }
+}
+
+function sk_show_excerpts() {
+    return 'excerpts';
+}
