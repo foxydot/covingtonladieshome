@@ -1074,6 +1074,45 @@ address {
     background-position: center center; }
     .page-title-area .banner.imagecenter .wrap .bannertext {
       float: left; }
+  .page-title-area .history-banner .bannertext, .page-title-area .building-banner .bannertext, .page-title-area .gala-banner .bannertext, .page-title-area .donate-banner .bannertext {
+    padding-top: 12em; }
+  .page-title-area .history-banner h1.entry-title, .page-title-area .building-banner h1.entry-title, .page-title-area .gala-banner h1.entry-title, .page-title-area .donate-banner h1.entry-title {
+    font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #666; }
+  .page-title-area .history-banner h2, .page-title-area .building-banner h2, .page-title-area .gala-banner h2, .page-title-area .donate-banner h2 {
+    font-size: 2em;
+    position: relative;
+    font-weight: 400; }
+  .page-title-area .resident-banner .bannertext, .page-title-area .staff-banner .bannertext {
+    padding-top: 9em; }
+  .page-title-area .employment-banner .wrap .gradient, .page-title-area .contact-banner .wrap .gradient, .page-title-area .media-banner .wrap .gradient, .page-title-area .privacy-banner .wrap .gradient, .page-title-area .short-banner .wrap .gradient {
+    max-height: 6em;
+    min-height: 6em;
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center; }
+    .page-title-area .employment-banner .wrap .gradient .bannertext, .page-title-area .contact-banner .wrap .gradient .bannertext, .page-title-area .media-banner .wrap .gradient .bannertext, .page-title-area .privacy-banner .wrap .gradient .bannertext, .page-title-area .short-banner .wrap .gradient .bannertext {
+      padding-top: 1em; }
+      .page-title-area .employment-banner .wrap .gradient .bannertext h1.entry-title, .page-title-area .contact-banner .wrap .gradient .bannertext h1.entry-title, .page-title-area .media-banner .wrap .gradient .bannertext h1.entry-title, .page-title-area .privacy-banner .wrap .gradient .bannertext h1.entry-title, .page-title-area .short-banner .wrap .gradient .bannertext h1.entry-title {
+        display: inline;
+        font-size: 2em;
+        background-color: rgba(255, 255, 255, 0.6);
+        -webkit-box-shadow: 0 0 86px 25px rgba(255, 255, 255, 0.75);
+                box-shadow: 0 0 86px 25px rgba(255, 255, 255, 0.75); }
+  .page-title-area .media-banner .wrap .gradient .bannertext
+  h1.entry-title, .page-title-area .privacy-banner .wrap .gradient .bannertext
+  h1.entry-title {
+    font-size: 1.4em;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0 0 86px 25px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 86px 25px rgba(255, 255, 255, 0); }
 
 @media only screen and (max-width: 767px) {
   .genesis-responsive-menu .wrap {
@@ -1651,6 +1690,22 @@ p.entry-meta {
   font-weight: 400;
   font-size: 1.2em; }
 
+.page.gala {
+  background: #FFF; }
+  .page.gala .site-inner .wrap {
+    background-color: #FFF;
+    background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
+    background-position: top right;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    position: relative; }
+    .page.gala .site-inner .wrap .content-sidebar-wrap {
+      clear: right; }
+    .page.gala .site-inner .wrap .sidebar {
+      background-color: #FFF; }
+  .page.gala .site-footer .wrap {
+    background: #fff; }
+
 .sidebar .sidebarcontent.bullets ul li {
   list-style-type: disc;
   margin-left: 2em;
@@ -1721,23 +1776,9 @@ p.entry-meta {
         display: -ms-flexbox;
         display: flex; }
 
-  .page.gala {
-    background: #FFF; }
-    .page.gala .site-inner .wrap {
-      background-color: #FFF;
-      background-image: url("http://clh.msdlab2.com/system/assets/uploads/2017/09/gala-background.png");
-      background-position: top right;
-      background-size: auto 100%;
-      background-repeat: no-repeat; }
-      .page.gala .site-inner .wrap .text-sizer {
-        position: absolute;
-        right: 2em; }
-      .page.gala .site-inner .wrap .content-sidebar-wrap {
-        clear: right; }
-      .page.gala .site-inner .wrap .sidebar {
-        background-color: #FFF; }
-    .page.gala .site-footer .wrap {
-      background: #fff; }
+  .page.gala .site-inner .wrap .text-sizer {
+    position: absolute;
+    right: 2em; }
 
   .no-green, .tribe-events-style-theme {
     background: #fff; }
@@ -1937,67 +1978,13 @@ p.entry-meta {
 
   .page-title-area {
     background: #FFF; }
-    .page-title-area .banner {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center; }
-      .page-title-area .banner .texturize .gradient {
-        min-height: 400px; }
-    .page-title-area .history-banner h1.entry-title, .page-title-area .building-banner h1.entry-title, .page-title-area .gala-banner h1.entry-title, .page-title-area .donate-banner h1.entry-title {
-      font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
-      font-weight: 400;
-      font-size: 1em;
-      font-weight: 700;
-      text-transform: uppercase;
-      position: relative;
-      top: 250px; }
-    .page-title-area .history-banner h2, .page-title-area .building-banner h2, .page-title-area .gala-banner h2, .page-title-area .donate-banner h2 {
-      font-size: 2em;
-      position: relative;
-      top: 250px; }
-    .page-title-area .staff-banner h1.entry-title {
-      position: relative;
-      top: 150px; }
-    .page-title-area .employment-banner .wrap {
-      max-height: 120px; }
-      .page-title-area .employment-banner .wrap .gradient {
-        background: none; }
-    .page-title-area .media-banner h1.entry-title {
-      font-size: 1.5em; }
-    .page-title-area .media-banner .wrap {
-      max-height: 120px; }
-      .page-title-area .media-banner .wrap .gradient {
-        background: none; }
-    .page-title-area .privacy-banner h1.entry-title {
-      font-size: 1.3em;
-      padding-top: 20px; }
-    .page-title-area .privacy-banner .wrap {
-      max-height: 120px; }
-      .page-title-area .privacy-banner .wrap .gradient {
-        background: none; }
-    .page-title-area .contact-banner h1.entry-title, .page-title-area .short-banner h1.entry-title {
-      display: inline;
-      font-size: 2em;
-      position: relative;
-      top: 20px;
-      background-color: rgba(255, 255, 255, 0.6);
-      -webkit-box-shadow: 67px 12px 86px 25px rgba(255, 255, 255, 0.7);
-              box-shadow: 67px 12px 86px 25px rgba(255, 255, 255, 0.7); }
-    .page-title-area .contact-banner .wrap, .page-title-area .short-banner .wrap {
-      max-height: 120px; }
-      .page-title-area .contact-banner .wrap .gradient, .page-title-area .short-banner .wrap .gradient {
-        background: none; }
-    .page-title-area .resident-banner h1.entry-title {
-      top: 150px;
-      display: inline;
-      font-size: 2em;
-      position: relative;
-      background-color: rgba(255, 255, 255, 0.7);
-      -webkit-box-shadow: 0px 0px 86px 25px rgba(255, 255, 255, 0.8);
-              box-shadow: 0px 0px 86px 25px rgba(255, 255, 255, 0.8); }
+    .page-title-area .banner .texturize .gradient {
+      min-height: 400px; }
 
   .page-title-area .banner .wrap .gradient {
     min-height: 450px; }
+  .page-title-area .employment-banner .wrap .gradient, .page-title-area .contact-banner .wrap .gradient, .page-title-area .media-banner .wrap .gradient, .page-title-area .privacy-banner .wrap .gradient, .page-title-area .short-banner .wrap .gradient {
+    min-height: 120px; }
 
   /* # Nav
   ---------------------------------------------------------------------------------------------------- */

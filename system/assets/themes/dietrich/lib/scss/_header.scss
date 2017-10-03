@@ -181,4 +181,53 @@
       }
     }
   }
+  .history-banner,.building-banner ,.gala-banner, .donate-banner{
+    .bannertext {
+      padding-top: 12em;
+    }
+     h1.entry-title {
+       @include sansserif(1);
+       font-weight: 700;
+       text-transform: uppercase;
+       color: $dkgrey;
+     }
+     h2 {
+       font-size: 2em;
+       position: relative;
+       font-weight: 400;
+     }
+   }
+  .resident-banner,.staff-banner{
+    .bannertext {
+      padding-top: 9em;
+    }
+  }
+  .employment-banner,.contact-banner,.media-banner,.privacy-banner,.short-banner{
+    .wrap{
+      .gradient {
+        max-height: 6em;
+        min-height: 6em;
+        background: none;
+        display: flex;
+        align-content: center;
+        .bannertext{
+          padding-top: 1em;
+          h1.entry-title{
+            display: inline;
+            font-size: 2em;
+            background-color:rgba(255,255,255,0.6);
+            box-shadow: 0 0 86px 25px rgba(255,255,255,0.75);
+          }
+        }
+      }
+    }
+  }
+  .media-banner, .privacy-banner {
+    .wrap .gradient .bannertext
+    h1.entry-title {
+      font-size: 1.4em;
+      background-color: rgba($white,0);
+      box-shadow: 0 0 86px 25px rgba(255,255,255,0);
+    }
+  }
 }

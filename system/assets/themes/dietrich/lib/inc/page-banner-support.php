@@ -81,7 +81,9 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 print '<div class="gradient">';
                 print '<div class="bannertext">';
                 print genesis_do_post_title();
-                print '<div class="bannercontent">' . $bannercontent . '</div>';
+                if($bannercontent != '') {
+                    print '<div class="bannercontent">' . $bannercontent . '</div>';
+                }
                 print '</div>';
                 print '</div>';
                 print '</div>';
@@ -112,7 +114,9 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 print '<div class="gradient">';
                 print '<div class="bannertext">';
                 print genesis_do_post_title();
-                print '<div class="bannercontent">' . $bannercontent . '</div>';
+                if($bannercontent != '') {
+                    print '<div class="bannercontent">' . $bannercontent . '</div>';
+                }
                 print '</div>';
                 print '</div>';
                 print '</div>';
@@ -145,7 +149,9 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 print '<div class="gradient">';
                 print '<div class="bannertext">';
                 print genesis_do_post_title();
-                print '<div class="bannercontent">' . $bannercontent . '</div>';
+                if($bannercontent != '') {
+                    print '<div class="bannercontent">' . $bannercontent . '</div>';
+                }
                 print '</div>';
                 print '</div>';
                 print '</div>';
