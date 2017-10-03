@@ -32,8 +32,9 @@
   display: flex;
   flex-wrap: wrap;
   .team{
-    border-right: 1px solid $border;
-    background: $white;
+    &.odd{
+      border-right: 1px solid $border;
+    }
     .headshot{
       padding: 2em 2em 0.5em 2em;
     }

@@ -359,7 +359,7 @@ if (!class_exists('MSDTeamCPT')) {
         function team_display($team,$attr = array()){
             global $post,$team_info,$contact_info;
             extract($attr);
-            $headshot = get_the_post_thumbnail($team->ID,'headshot-lg');
+            $headshot = get_the_post_thumbnail($team->ID,'headshot-lg',array( 'class' => 'addborder' ));
             $team_info->the_meta($team->ID);
             $jobtitle = $team_info->get_the_value('jobtitle');
             if($jobtitle != ''){
@@ -392,7 +392,7 @@ if (!class_exists('MSDTeamCPT')) {
                 $team_contact_info .= '<li class="email"><i class="icon-envelope-alt icon-large"></i> '.msd_str_fmt($contact_info->get_the_value(),'email').'</li>';
             }
             $teamstr = '
-            <div class="team '.$team->post_name.' col-sm-4 col-xs-12">
+            <div class="team '.$team->post_name.' col-sm-6 col-xs-12">
                 <div class="headshot">
                     '.$headshot.'
                 </div>
