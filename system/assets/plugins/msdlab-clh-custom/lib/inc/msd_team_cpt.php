@@ -30,12 +30,15 @@ if (!class_exists('MSDTeamCPT')) {
             add_action('admin_footer',array(&$this,'info_footer_hook') );
             // important: note the priority of 99, the js needs to be placed after tinymce loads
             add_action('admin_print_footer_scripts',array(&$this,'print_footer_scripts'),99);
-            add_action('template_redirect', array(&$this,'my_theme_redirect'));
+            //add_action('template_redirect', array(&$this,'my_theme_redirect'));
             add_action('admin_head', array(&$this,'codex_custom_help_tab'));
 
             //Filters
             add_filter( 'pre_get_posts', array(&$this,'custom_query') );
             add_filter( 'enter_title_here', array(&$this,'change_default_title') );
+
+            add_shortcode('team',array(&$this,'shortcode_handler'));
+
         }
 
 
@@ -300,6 +303,98 @@ if (!class_exists('MSDTeamCPT')) {
                     //display for aggregate here
                 }
             }
+        }
+
+
+        function get_all_team_members(){
+            $args = array(
+                'posts_per_page'   => -1,
+                'orderby'          => 'title',
+                'order'            => 'ASC',
+                'post_type'        => $this->cpt,
+            );
+            $posts = get_posts($args);
+            $i = 0;
+            foreach($posts AS $post){
+                $posts[$i]->lastname = get_post_meta($post->ID,'_team_alpha',TRUE);
+                $i++;
+            }
+            usort($posts,array(&$this,'sort_by_lastname'));
+            return $posts;
+        }
+
+        function shortcode_handler($atts){
+            extract(shortcode_atts(array(
+                'type' => 'grid',
+            ), $atts));
+            $ret = '';
+            $fullteam = $this->get_all_team_members();
+            foreach($fullteam AS $team) {
+                $ret .= $this->team_display($team);
+            }
+            return $ret;
+        }
+
+        function team_display($team,$attr = array()){
+            global $post,$team_info,$contact_info;
+            extract($attr);
+            $headshot = get_the_post_thumbnail($team->ID,'headshot-lg');
+            $team_info->the_meta($team->ID);
+            $jobtitle = $team_info->get_the_value('jobtitle');
+            if($jobtitle != ''){
+                $jobtitle = '<h4 class="jobtitle">'.$jobtitle.'</h4>';
+            }
+            $team_contact_info = '';
+            $contact_info->the_meta($team->ID);
+            $contact_info->the_field('_team_member_phone');
+            if($contact_info->get_the_value() != ''){
+                $team_contact_info .= '<li class="phone"><i class="icon-phone icon-large"></i> '.msd_str_fmt($contact_info->get_the_value(),'phone').'</li>';
+            }
+
+            $contact_info->the_field('_team_member_mobile');
+            if($contact_info->get_the_value() != ''){
+                $team_contact_info .= '<li class="mobile"><i class="icon-mobile-phone icon-large"></i> '.msd_str_fmt($contact_info->get_the_value(),'phone').'</li>';
+            }
+
+            $contact_info->the_field('_team_member_linked_in');
+            if($contact_info->get_the_value() != ''){
+                $team_contact_info .= '<li class="linkedin"><a href="'.$contact_info->get_the_value().'"><i class="icon-linkedin-sign icon-large"></i> Connect</a></li>';
+            }
+
+            $contact_info->the_field('_team_member_bio_sheet');
+            if($contact_info->get_the_value() != ''){
+                $team_contact_info .= '<li class="vcard"><a href="'.$contact_info->get_the_value().'"><i class="icon-download-alt icon-large"></i> Download Bio</a></li>';
+            }
+
+            $contact_info->the_field('_team_member_email');
+            if($contact_info->get_the_value() != ''){
+                $team_contact_info .= '<li class="email"><i class="icon-envelope-alt icon-large"></i> '.msd_str_fmt($contact_info->get_the_value(),'email').'</li>';
+            }
+            $teamstr = '
+            <div class="team '.$team->post_name.'">
+                <div class="headshot">
+                    '.$headshot.'
+                </div>
+                <div class="info">
+                    <h3>'.$team->post_title.'</h3>
+                    '.$jobtitle;
+                $teamstr .= '
+                        <div class="bio">'.$team->post_content.'</div>';
+            $teamstr .= '
+                    <ul class="team_member-contact-info">
+                    '.$team_contact_info.'
+                    </ul>
+                </div>
+            </div>';
+            return $teamstr;
+        }
+
+        function sort_by_lastname( $a, $b ) {
+            return $a->lastname == $b->lastname ? 0 : ( $a->lastname < $b->lastname ) ? -1 : 1;
+        }
+
+        function print_shortcode_handler(){
+            print $this->shortcode_handler(array());
         }
     } //End Class
 } //End if class exists statement
