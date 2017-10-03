@@ -188,9 +188,8 @@
     }
      h1.entry-title {
        @include sansserif(1);
-       font-weight: 700;
+       font-weight: 900;
        text-transform: uppercase;
-       color: $dkgrey;
      }
      h2 {
        font-size: 2em;

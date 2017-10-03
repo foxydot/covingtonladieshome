@@ -1081,9 +1081,8 @@ address {
     font-family: "Muli", "Trebuchet MS", "Arial", sans-serif;
     font-weight: 400;
     font-size: 1em;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #666; }
+    font-weight: 900;
+    text-transform: uppercase; }
   .page-title-area .history-banner h2, .page-title-area .building-banner h2, .page-title-area .gala-banner h2, .page-title-area .donate-banner h2 {
     font-size: 2em;
     position: relative;
