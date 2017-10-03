@@ -97,7 +97,6 @@ if(class_exists('MSDLabTextSizer')){
     add_action('genesis_before_content_sidebar_wrap',array($msdlab_text_sizer,'display_text_resizer'));
 }
 
-
 /*** HEADER ***/
 add_action('wp_head','msdlab_maybe_wrap_inner');
 add_filter( 'genesis_search_text', 'msdlab_search_text' ); //customizes the serach bar placeholder
@@ -205,4 +204,12 @@ function genesis_msdlab_child_comments_gravatar( $args ) {
 
 	return $args;
 
+}
+add_filter('genesis_pre_get_option_site_layout', 'msdlab_force_layout');
+
+function msdlab_force_layout($layout){
+    if(tribe_is_event_query()){
+        $layout = 'full-width-content';
+    }
+    return $layout;
 }

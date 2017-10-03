@@ -86,9 +86,9 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 print '</div>';
                 print '</div>';
                 print '</div>';
-            }elseif(get_post_type() == 'post'){
+            } elseif(get_post_type() == 'post') {
                 global $post, $page_banner_metabox;
-                $blog_id = get_option( 'page_for_posts' );
+                $blog_id = get_option('page_for_posts');
                 $page_banner_metabox->the_meta($blog_id);
                 $bannerbool = $page_banner_metabox->get_the_value('bannerbool');
                 if ($bannerbool != 'true') {
@@ -98,14 +98,14 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 $banneralign = $page_banner_metabox->get_the_value('banneralign');
                 $bannerimage = $page_banner_metabox->get_the_value('bannerimage');
                 $bannercontent = apply_filters('the_content', $page_banner_metabox->get_the_value('bannercontent'));
-                remove_action('genesis_before_loop','genesis_do_cpt_archive_title_description');
-                remove_action('genesis_before_loop','genesis_do_date_archive_title');
-                remove_action('genesis_before_loop','genesis_do_blog_template_heading');
-                remove_action('genesis_before_loop','genesis_do_posts_page_heading');
-                remove_action('genesis_before_loop','genesis_do_taxonomy_title_description',15);
-                remove_action('genesis_before_loop','genesis_do_author_title_description',15);
-                remove_action('genesis_before_loop','genesis_do_author_box_archive',15);
-                add_filter('genesis_post_title_text',array(&$this,'msdlab_blog_page_title'));
+                remove_action('genesis_before_loop', 'genesis_do_cpt_archive_title_description');
+                remove_action('genesis_before_loop', 'genesis_do_date_archive_title');
+                remove_action('genesis_before_loop', 'genesis_do_blog_template_heading');
+                remove_action('genesis_before_loop', 'genesis_do_posts_page_heading');
+                remove_action('genesis_before_loop', 'genesis_do_taxonomy_title_description', 15);
+                remove_action('genesis_before_loop', 'genesis_do_author_title_description', 15);
+                remove_action('genesis_before_loop', 'genesis_do_author_box_archive', 15);
+                add_filter('genesis_post_title_text', array(&$this, 'msdlab_blog_page_title'));
                 $background = strlen($bannerimage) > 0 ? ' style="background-image:url(' . $bannerimage . ')"' : '';
                 print '<div class="banner clearfix ' . $banneralign . ' ' . $bannerclass . '">';
                 print '<div class="wrap"' . $background . '>';
@@ -117,7 +117,40 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 print '</div>';
                 print '</div>';
                 print '</div>';
-                remove_filter('genesis_post_title_text',array(&$this,'msdlab_blog_page_title'));
+                remove_filter('genesis_post_title_text', array(&$this, 'msdlab_blog_page_title'));
+            } elseif(tribe_is_event_query()){
+                global $post, $page_banner_metabox;
+                $calendar = get_page_by_path('events-calendar');
+                $calendar_id = $calendar->ID;
+                $page_banner_metabox->the_meta($calendar_id);
+                $bannerbool = $page_banner_metabox->get_the_value('bannerbool');
+                if ($bannerbool != 'true') {
+                    return;
+                }
+                $bannerclass = $page_banner_metabox->get_the_value('bannerclass');
+                $banneralign = $page_banner_metabox->get_the_value('banneralign');
+                $bannerimage = $page_banner_metabox->get_the_value('bannerimage');
+                $bannercontent = apply_filters('the_content', $page_banner_metabox->get_the_value('bannercontent'));
+                remove_action('genesis_before_loop', 'genesis_do_cpt_archive_title_description');
+                remove_action('genesis_before_loop', 'genesis_do_date_archive_title');
+                remove_action('genesis_before_loop', 'genesis_do_blog_template_heading');
+                remove_action('genesis_before_loop', 'genesis_do_posts_page_heading');
+                remove_action('genesis_before_loop', 'genesis_do_taxonomy_title_description', 15);
+                remove_action('genesis_before_loop', 'genesis_do_author_title_description', 15);
+                remove_action('genesis_before_loop', 'genesis_do_author_box_archive', 15);
+                add_filter('genesis_post_title_text', array(&$this, 'msdlab_calendar_page_title'));
+                $background = strlen($bannerimage) > 0 ? ' style="background-image:url(' . $bannerimage . ')"' : '';
+                print '<div class="banner clearfix ' . $banneralign . ' ' . $bannerclass . '">';
+                print '<div class="wrap"' . $background . '>';
+                print '<div class="gradient">';
+                print '<div class="bannertext">';
+                print genesis_do_post_title();
+                print '<div class="bannercontent">' . $bannercontent . '</div>';
+                print '</div>';
+                print '</div>';
+                print '</div>';
+                print '</div>';
+                remove_filter('genesis_post_title_text', array(&$this, 'msdlab_calendar_page_title'));
             } else {
                 //genesis_do_post_title();
             }
@@ -127,6 +160,12 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
             $blog_id = get_option( 'page_for_posts' );
             return get_the_title($blog_id);
         }
+
+        function msdlab_calendar_page_title($title){
+            $calendar = get_page_by_path('events-calendar');
+            $calendar_id = $calendar->ID;
+            return get_the_title($calendar_id);
+    }
 
     } //End Class
 } //End if class exists statement

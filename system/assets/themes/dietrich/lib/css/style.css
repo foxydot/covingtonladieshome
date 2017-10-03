@@ -1678,6 +1678,9 @@ p.entry-meta {
   .team-display-grid .team .info .jobtitle {
     margin-bottom: 1em; }
 
+.tribe-bar-views-list li {
+  font-size: 0.8em; }
+
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
   --------------------------------------------- */
@@ -1736,11 +1739,11 @@ p.entry-meta {
     .page.gala .site-footer .wrap {
       background: #fff; }
 
-  .no-green {
+  .no-green, .tribe-events-style-theme {
     background: #fff; }
-    .no-green .site-inner .wrap {
+    .no-green .site-inner .wrap, .tribe-events-style-theme .site-inner .wrap {
       background: #fff; }
-    .no-green .site-footer .wrap {
+    .no-green .site-footer .wrap, .tribe-events-style-theme .site-footer .wrap {
       background: #fff; }
 
   /* ## Column Widths and Positions
