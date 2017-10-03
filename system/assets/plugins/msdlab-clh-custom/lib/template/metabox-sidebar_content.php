@@ -10,7 +10,7 @@
     </tr>
     <?php $mb->the_field('sidebarcontent'); ?>
     <tr valign="top" class="switchable">
-        <th scope="row"><label for="sidebarcontent">Banner Content</label></th>
+        <th scope="row"><label for="sidebarcontent">Sidebar Content</label></th>
         <td>
             <?php
             $mb_content = html_entity_decode($mb->get_the_value(), ENT_QUOTES, 'UTF-8');
