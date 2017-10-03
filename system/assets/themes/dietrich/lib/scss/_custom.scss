@@ -27,3 +27,27 @@
     @include sansserif(1);
   }
 }
+
+.team-display-grid{
+  display: flex;
+  flex-wrap: wrap;
+  .team{
+    border-right: 1px solid $border;
+    background: $white;
+    .headshot{
+      padding: 2em 2em 0.5em 2em;
+    }
+    .info{
+      .name,.jobtitle{
+        text-align: center;
+      }
+      .name{
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .jobtitle{
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

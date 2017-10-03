@@ -31,6 +31,8 @@ if (!class_exists('MSDTeamCPT')) {
             // important: note the priority of 99, the js needs to be placed after tinymce loads
             add_action('admin_print_footer_scripts',array(&$this,'print_footer_scripts'),99);
             //add_action('template_redirect', array(&$this,'my_theme_redirect'));
+            add_action('wp_head',array(&$this,'cpt_display'));
+
             add_action('admin_head', array(&$this,'codex_custom_help_tab'));
 
             //Filters
@@ -299,10 +301,29 @@ if (!class_exists('MSDTeamCPT')) {
             if(is_cpt($this->cpt)) {
                 if (is_single()){
                     //display content here
+                    add_action('genesis_before_entry_content',array(&$this,'single_pre_content'));
+
                 } else {
                     //display for aggregate here
                 }
             }
+        }
+
+        function single_pre_content(){
+            global $post,$team_info,$contact_info;
+            $headshot = get_the_post_thumbnail($post->ID,'headshot-lg',array( 'class' => 'alignleft' ));
+            $team_info->the_meta($post->ID);
+            $jobtitle = $team_info->get_the_value('jobtitle');
+            if($jobtitle != ''){
+                $jobtitle = '<h4 class="jobtitle">'.$jobtitle.'</h4>';
+            }
+
+            print $jobtitle;
+            print $headshot;
+        }
+
+        function single_post_content(){
+
         }
 
 
@@ -332,7 +353,7 @@ if (!class_exists('MSDTeamCPT')) {
             foreach($fullteam AS $team) {
                 $ret .= $this->team_display($team);
             }
-            return $ret;
+            return '<div class="team-display-'.$type.'">'.$ret.'</div>';
         }
 
         function team_display($team,$attr = array()){
@@ -371,12 +392,12 @@ if (!class_exists('MSDTeamCPT')) {
                 $team_contact_info .= '<li class="email"><i class="icon-envelope-alt icon-large"></i> '.msd_str_fmt($contact_info->get_the_value(),'email').'</li>';
             }
             $teamstr = '
-            <div class="team '.$team->post_name.'">
+            <div class="team '.$team->post_name.' col-sm-4 col-xs-12">
                 <div class="headshot">
                     '.$headshot.'
                 </div>
                 <div class="info">
-                    <h3>'.$team->post_title.'</h3>
+                    <h3 class="name">'.$team->post_title.'</h3>
                     '.$jobtitle;
                 $teamstr .= '
                         <div class="bio">'.$team->post_content.'</div>';

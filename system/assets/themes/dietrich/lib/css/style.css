@@ -1660,6 +1660,25 @@ p.entry-meta {
   font-weight: 400;
   font-size: 1em; }
 
+.team-display-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .team-display-grid .team {
+    border-right: 1px solid #CCC;
+    background: #FFF; }
+    .team-display-grid .team .headshot {
+      padding: 2em 2em 0.5em 2em; }
+    .team-display-grid .team .info .name, .team-display-grid .team .info .jobtitle {
+      text-align: center; }
+    .team-display-grid .team .info .name {
+      text-transform: uppercase;
+      font-weight: 700; }
+    .team-display-grid .team .info .jobtitle {
+      margin-bottom: 1em; }
+
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
   --------------------------------------------- */
