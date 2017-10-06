@@ -263,9 +263,9 @@ function msdlab_get_events_calendar( $initial = true, $echo = true ) {
     //create dayswithposts from monthevents array.
     foreach($monthevents AS $event){
         if(date('d',strtotime($event->EventStartDate)) == date('d',strtotime($event->EventEndDate))){
-            $dayswithposts[date('d',strtotime($event->EventStartDate))][] = $event->ID;
+            $dayswithposts[date('j',strtotime($event->EventStartDate))][] = $event->ID;
         } else {
-            for ($i=date('d',strtotime($event->EventStartDate)); $i<=date('d',strtotime($event->EventEndDate)); $i++){
+            for ($i=date('d',strtotime($event->EventStartDate)); $i<=date('j',strtotime($event->EventEndDate)); $i++){
                 $dayswithposts[$i][] = $event->ID;
             }
         }
