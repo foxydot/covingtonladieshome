@@ -63,7 +63,8 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
         }
 
         function msdlab_do_page_banner(){
-            if(is_page()) {
+            $blog_id = get_option('page_for_posts');
+            if(is_page() && !is_home()) {
                 global $post, $page_banner_metabox;
                 $page_banner_metabox->the_meta();
                 $bannerbool = $page_banner_metabox->get_the_value('bannerbool');
@@ -88,9 +89,8 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 print '</div>';
                 print '</div>';
                 print '</div>';
-            } elseif(get_post_type() == 'post') {
+            } elseif(is_home() || (is_archive() && $post->post_type == "post") || (is_single() && $post->post_type == "post") ) {
                 global $post, $page_banner_metabox;
-                $blog_id = get_option('page_for_posts');
                 $page_banner_metabox->the_meta($blog_id);
                 $bannerbool = $page_banner_metabox->get_the_value('bannerbool');
                 if ($bannerbool != 'true') {
@@ -159,6 +159,7 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 remove_filter('genesis_post_title_text', array(&$this, 'msdlab_calendar_page_title'));
             } else {
                 //genesis_do_post_title();
+                print '4';
             }
         }
 
