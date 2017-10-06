@@ -159,7 +159,6 @@ if (!class_exists('MSDLab_Page_Banner_Support')) {
                 remove_filter('genesis_post_title_text', array(&$this, 'msdlab_calendar_page_title'));
             } else {
                 //genesis_do_post_title();
-                print '4';
             }
         }
 

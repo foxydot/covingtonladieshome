@@ -32,7 +32,7 @@ if (!class_exists('MSDResourceCPT')) {
             //add_action('admin_head', array(&$this,'codex_custom_help_tab'));
 
             //Filters
-            add_filter( 'pre_get_posts', array(&$this,'custom_query') );
+            //add_filter( 'pre_get_posts', array(&$this,'custom_query') );
             //add_filter( 'enter_title_here', array(&$this,'change_default_title') );
 
             add_shortcode('press',array(&$this,'shortcode_handler'));
