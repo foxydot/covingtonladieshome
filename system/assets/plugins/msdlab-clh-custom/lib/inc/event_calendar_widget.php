@@ -252,21 +252,23 @@ function msdlab_get_events_calendar( $initial = true, $echo = true ) {
     $daywithpost = array();
     $dayswithposts = array();
 
-    $monthevents = tribe_get_events(array('start_date'=>$thisyear.'-'.$thismonth.'-01 00:00:00','end_date'=>$thisyear.'-'.$thismonth.'-'.$last_day.' 23:59:59','hide_upcoming'=>false));
+    $monthevents = tribe_get_events(array('start_date'=>$thisyear.'-'.$thismonth.'-01 00:00:00','end_date'=>$thisyear.'-'.$thismonth.'-'.$last_day.' 23:59:59','hide_upcoming'=>false,'posts_per_page'=>-1));
 
+    $monthpublicevents = tribe_get_events(array('start_date'=>$thisyear.'-'.$thismonth.'-01 00:00:00','end_date'=>$thisyear.'-'.$thismonth.'-'.$last_day.' 23:59:59','hide_upcoming'=>false,'posts_per_page'=>-1,'tribe_events_cat'=>'public-events'));
+
+    $public_ids = array();
+    foreach ($monthpublicevents AS $publicevent){
+        $public_ids[] = $publicevent->ID;
+    }
+    ts_data($public_ids);
     //create dayswithposts from monthevents array.
     foreach($monthevents AS $event){
         if(date('d',strtotime($event->EventStartDate)) == date('d',strtotime($event->EventEndDate))){
-            $dayswithposts[][] = date('d',strtotime($event->EventStartDate));
+            $dayswithposts[date('d',strtotime($event->EventStartDate))][] = $event->ID;
         } else {
             for ($i=date('d',strtotime($event->EventStartDate)); $i<=date('d',strtotime($event->EventEndDate)); $i++){
-                $dayswithposts[][] = $i;
+                $dayswithposts[$i][] = $event->ID;
             }
-        }
-    }
-    if ( $dayswithposts ) {
-        foreach ( (array) $dayswithposts as $daywith ) {
-            $daywithpost[] = $daywith[0];
         }
     }
 
@@ -293,15 +295,23 @@ function msdlab_get_events_calendar( $initial = true, $echo = true ) {
             $calendar_output .= '<td>';
         }
 
-        if ( in_array( $day, $daywithpost ) ) {
+        if ( isset($dayswithposts[$day]) ) {
             // any posts today?
+            $class = 'resident-events';
+            foreach($dayswithposts[$day] AS $event_id){
+                if(in_array($event_id,$public_ids)){
+                    $class = 'public-events';
+                    continue;
+                }
+            }
             $date_format = date( _x( 'F j, Y', 'daily archives date format' ), strtotime( "{$thisyear}-{$thismonth}-{$day}" ) );
             /* translators: Post calendar label. 1: Date */
             $label = sprintf( __( 'Events on %s' ), $date_format );
             $calendar_output .= sprintf(
-                '<a href="%s" aria-label="%s">%s</a>',
+                '<a href="%s" aria-label="%s" class="%s"">%s</a>',
                 tribe_get_day_link( $thisyear.'-'.$thismonth.'-'.$day),
                 esc_attr( $label ),
+                $class,
                 $day
             );
         } else {

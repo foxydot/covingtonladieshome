@@ -79,11 +79,14 @@
          padding: 0 6px;
          a{
            display: inline-block;
-           background: $ltblue;
            border-radius: 100%;
-           color: $white;
+           color: $blue;
            text-decoration: none;
            width: 2em;
+         }
+         a.public-events{
+           background: $ltblue;
+           color: $white;
          }
        }
      }
