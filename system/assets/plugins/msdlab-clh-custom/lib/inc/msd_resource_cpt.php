@@ -262,7 +262,7 @@ if (!class_exists('MSDResourceCPT')) {
                         $post_types = explode(',', $post_types);
 
                     if(empty($post_types))
-                        $post_types = array('post','page'); // If there are no post types defined, be sure to include posts so that they are not ignored
+                        $post_types = array('post'); // If there are no post types defined, be sure to include posts so that they are not ignored
 
                     if ($query->is_search()) {
                         $searchterm = $query->query_vars['s'];
